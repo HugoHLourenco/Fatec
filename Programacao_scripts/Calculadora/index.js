@@ -2,8 +2,8 @@ const { createApp } = Vue
 createApp({
     data() {
         return{
-           teste: "dasdsa"
-
+            teste: "testedasdaddasda",
+            numero: 1
         }
     },
     methods: {
