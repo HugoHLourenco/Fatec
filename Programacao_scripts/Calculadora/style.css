@@ -11,6 +11,7 @@
 }
 
 .display{
+
     background-color: darkcyan;
     border-radius: 15px;
     border: 1px solid black;
@@ -42,7 +43,6 @@ button:hover {
     margin: 1px;
     height: 64px;
     font-size: 23px;
-    background-color: darkgray;
     border-radius: 8px;
     background-color: orange;
 }
@@ -52,7 +52,6 @@ button:hover {
     margin: 1px;
     height: 48px;
     font-size: 23px;
-    background-color: darkgray;
     border-radius: 8px;
     background-color: #bc7800;
 }
