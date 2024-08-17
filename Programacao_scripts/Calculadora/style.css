@@ -8,10 +8,11 @@
 
 .linha{
     display: flex;
+
 }
 
 .display{
-
+    text-align: right;
     background-color: darkcyan;
     border-radius: 15px;
     border: 1px solid black;
