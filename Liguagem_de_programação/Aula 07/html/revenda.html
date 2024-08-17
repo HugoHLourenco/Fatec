@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Aula 07/css/estilos.css">
+    <title>Site de revenda de veículos</title>
+</head>
+
+<body>
+    <img src="/Aula 07/img/ex5_3.jpg" alt="" class="alta">
+    <h1><strong>Revenda Herbie</strong></h1>
+
+    <p>Modelo:
+        <input type="text" id="inModelo" placeholder="Ex: Fiat" autofocus>
+    </p>
+    <p>Preço:
+        <input type="number" id="inPreco" placeholder="R$">
+        <button id="btAdicionar" onclick="adicionar()">Adicionar</button>
+    </p>
+    <button id="btListar" onclick="listar()">Listar todos</button>
+    <button id="btFiltrar" onclick="filtrar()">Filtrar todos</button>
+    <pre id="outLista"></pre>
+
+    <script src="/Aula 07/Js/revenda.js"></script>
+</body>
+
+</html>

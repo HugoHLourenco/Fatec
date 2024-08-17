@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Aula 05/css/estilo.css">
+    <title>Calculadora de peso</title>
+</head>
+<body>
+    <img src="/OneDrive_2_16-09-2023/Aula 5 - 16-09/img/ex3_2.jpg" alt="Balaça de peso">
+    <h1>
+        Programa Cálculo de Peso Ideal
+    </h1>
+
+    <p>
+        Nome:
+        <input type="text"  id="inNome">
+    </p>
+
+    <p>
+        Sexo:
+        <br><label>Masculino: <input type="radio" name="Sexo" id="inSexoM" checked></label>
+        <br><label>Feminino: <input type="radio" name="Sexo" id="inSexoF"></label>
+
+    </p>
+
+    <p>
+        Altura:
+        <input type="number" id="inAltura">
+    </p>
+
+    <p>
+        <input type="button" value="Calcular Peso Ideal" id="btCalc">
+        <input type="button" value="Limpar os Campos" id="btClear">
+    </p>
+
+    <h3 id="outImc"></h3>
+    <script src="js/peso.js"></script>
+</body>
+</html>

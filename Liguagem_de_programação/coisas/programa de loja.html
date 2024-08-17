@@ -1,0 +1,14 @@
+<script>
+    //entrada
+    var valor = Number(prompt("Digite o valor do produto: "))
+
+    //f(x)
+    var avista = (valor - (valor / 10))
+    var prazo = (valor / 3)*0.1
+    var prazo2=prazo+(valor/3)
+
+    //saida
+    alert("O valor do produto é: R$" + valor.toFixed(2)+
+        "\nO valor do produto à vista é: R$" + avista.toFixed(2)+
+        "\nO valor a prazo é de: R$" + prazo2.toFixed(2))
+</script>

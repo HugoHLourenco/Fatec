@@ -1,0 +1,23 @@
+<script>
+    do {
+        var num = Number(prompt("Digite um número: "))
+
+        if (num == 0 || isNaN(num)) {
+            alert("INSIRA UM VALOR VÁLIDO!!!")
+        }
+    } while (num == 0 || isNaN(num))
+
+    var pares = "Números pares entre 1 e " + num + ": "
+
+    //Não mostrar " , " no final
+    if (num > 1) {
+        pares += "2"
+    }
+
+    for(let i = 4; i <= num; i + 2){
+        pares = pares + ", " + i 
+    }
+
+    alert(pares)
+
+</script>

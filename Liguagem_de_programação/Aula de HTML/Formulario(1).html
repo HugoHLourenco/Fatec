@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+
+<body>
+
+    <!-- Montar uma página -->
+    <form>
+        <!-- Insira informação -->
+        <p>
+            <label for="Texto">Campo de texto:</label>
+            <input type="text" placeholder="Insira um texto">
+        </p>
+
+        <!-- Não editavel -->
+        <p>
+            <label for="Texto2">Campo somente para leitura:</label>
+            <input readonly name="Texto2" value="Não editavel">
+        </p>
+
+        <!-- Numérica -->
+        <p>
+            <label for="Num">Campo numérico:</label>
+            <input type="number" id="num">
+        </p>
+
+        <!-- Campo de data -->
+        <p>
+            <label for="data">Campo de data:</label>
+            <input type="date">
+        </p>
+
+        <!-- Anexar um arquivo -->
+        <p>
+            <label for="Arquivo">Campo de arquivo:</label>
+            <input type="file">
+        </p>
+
+        <!-- Escolher uma opção -->
+        <p>
+            Escolha sim ou não <br />
+            <label><input name="radio" type="radio" value="1">Sim</label>
+            <label><input name="radio" type="radio" value="0">Não</label>
+        </p>
+
+        <!-- Escolher várias opções -->
+        <p>
+            Escolha as frutas: <br/>
+            <label><input type="checkbox" name="check" value="1">Morango<label>
+            <label><input type="checkbox" name="check" value="2">Banana<label>
+            <label><input type="checkbox" name="check" value="3">Uva<label>
+            <label><input type="checkbox" name="check" value="4">Abacáxi<label>
+            <label><input type="checkbox" name="check" value="5">Manga<label>
+        </p>
+
+        <!-- Área de texto -->
+        <p>
+            <label for="tarea">Área do texto:</label>
+            <textarea name="textarea" id="txt" cols="30" rows="1" placeholder="Insira um texto:"></textarea>
+        </p>
+
+        <!-- Submeter os dados -->
+        <p>
+            <input type="submit" onclick="enviar()" value="Enviar formulário">
+        </p>
+    </form>
+
+</body>
+<!-- IHC -->
+<script>
+    function enviar(){
+        alert("Formulário enviado")
+    }
+</script>
+</html>

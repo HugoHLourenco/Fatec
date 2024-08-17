@@ -1,0 +1,58 @@
+create table site(
+site_nome varchar(30) not null, 
+site_tipo varchar(30) null, 
+endereco varchar(40) null
+);
+
+create table equipamento(
+equipamento_nome varchar(30) not null,
+tipo varchar(20) null,
+show create table <nome>; (mostra as tabelas mais detalhado)
+show tables; (mostra as tabelas)
+
+modelo varchar(30) null,
+fabricante varchar(30) null
+);
+
+insert into site (
+site_nome, site_tipo, endereco)
+values (
+‘google’, ‘google.net’, ‘www.google.com’);
+
+update site 
+set site_nome = 'fre_se'
+where site_nome = 'frc_ce';
+
+update equipamento 
+set site_nome = 'ma5800'
+where equipamento_nome = 'frl_ce_olt01';
+
+insert into equipamento (
+equipamento_nome, tipo, modelo, fabricante, site_nome)
+values (
+‘frc_ce_olt02’, ‘olt’, ‘mascow’, 'huawei', 'google');
+
+alter table equipamento
+add primary key
+(equipamento_nome);
+
+alter table equipamento
+add column site_nome
+varchar(30) not null;
+
+alter table equipamento
+drop primary key;
+
+alter table equipamento
+add primary key
+(equipamento_nome, site_nome);
+
+alter table equipamento
+drop column site_nome;
+
+delete from equipamento
+where modelo = 'ma5800' 
+
+alter table equipamento
+add foreign key(site_nome)
+references site(site_nome);

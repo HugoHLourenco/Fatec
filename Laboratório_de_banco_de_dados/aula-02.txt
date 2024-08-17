@@ -1,0 +1,8 @@
+select @@autocommit; (verifica o auto dommit do DB)
+set @@autocommit = 0;
+
+commit;
+
+rollback;
+
+

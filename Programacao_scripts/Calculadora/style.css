@@ -1,0 +1,33 @@
+.calculadora{
+    background-color: whitesmoke;
+    border: 1px solid black;
+    width: 180px;
+    height: 240px;
+    border-radius: 10px;
+}
+
+.linha{
+    display: flex;
+}
+
+.display{
+    background-color: darkgray;
+    border-radius: 15px;
+    border: 1px solid black;
+}
+
+.bt {
+    width: 64px;
+    margin: 1px;
+    height: 64px;
+    font-size: 23px;
+    background-color: darkgray;
+    border-radius: 8px;
+    color: whitesmoke;
+}
+
+bt:active {
+    background-color: #c2c2c2;
+    transform: translateY(2px);
+}
+

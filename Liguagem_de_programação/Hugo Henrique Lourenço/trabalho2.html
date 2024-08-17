@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/estilo.css">
+    <title>Trabalho 2</title>
+</head>
+
+<body>
+    <header>
+        <h1>Programa concurso</h1>
+    </header>
+
+    <img src="/img/img-t2.jfif" alt="">
+
+    <div id="main">
+        <p id="candidato">
+            <strong>Candidato:</strong> <input type="text" id="inCandidato">
+        </p>
+
+        <p id="acertos">
+            <strong>N° de acertos:</strong> <input type="number" id="inAcertos">
+        </p>
+        <p id="botoes">
+            <button id="btAdicionar" onclick="adicionar()">Adicionar</button>
+            <button id="btListar" onclick="listar()">Listar todos</button>
+            <button id="btAprovados" onclick="aprovados()">Aprovados 2° etapa</button>
+            <button id="btLimpar" onclick="limpar()">Limpar</button>
+        </p>
+    </div>
+
+    <div>
+        <div id="divNotaCorte">
+            <p>
+                <strong>Nota de corte:</strong>
+            <p id="outNotaCorte"></p>
+            </p>
+        </div>
+        <pre id="out"></pre>
+    </div>
+
+    <script src="/js/trabalho2.js"></script>
+</body>
+
+</html>
