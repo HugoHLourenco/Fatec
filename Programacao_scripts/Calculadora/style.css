@@ -1,5 +1,9 @@
+body {
+    background-color: slategray;
+}
+
 .calculadora{
-    background-color: darkslategray;
+    background-color: dimgray;
     border: 1px solid black;
     width: 256px;
     height: auto;
@@ -12,8 +16,9 @@
 }
 
 .display{
+    font-family: DialogInput, system-ui ;
     text-align: right;
-    background-color: darkcyan;
+    background-color: ghostwhite;
     border-radius: 15px;
     border: 1px solid black;
     margin-top: 5px;
@@ -58,7 +63,7 @@ button:hover {
 }
 
 button:active {
-    background-color: darkslategray;
+    background-color: dimgray;
     transform: translateY(2px);
 }
 
