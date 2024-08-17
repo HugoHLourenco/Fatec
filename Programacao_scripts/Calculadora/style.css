@@ -1,8 +1,8 @@
 .calculadora{
-    background-color: whitesmoke;
+    background-color: darkslategray;
     border: 1px solid black;
-    width: 180px;
-    height: 240px;
+    width: 256px;
+    height: auto;
     border-radius: 10px;
 }
 
@@ -11,9 +11,15 @@
 }
 
 .display{
-    background-color: darkgray;
+    background-color: darkcyan;
     border-radius: 15px;
     border: 1px solid black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 40px;
+    width: 250px;
+    margin-left: 2px;
+    font-size: 30px;
 }
 
 .bt {
@@ -26,8 +32,33 @@
     color: whitesmoke;
 }
 
-bt:active {
-    background-color: #c2c2c2;
+button:hover {
+    color: whitesmoke;
+    background-color: slategray;
+}
+
+.func{
+    width: 64px;
+    margin: 1px;
+    height: 64px;
+    font-size: 23px;
+    background-color: darkgray;
+    border-radius: 8px;
+    background-color: orange;
+}
+
+.func2{
+    width: 128px;
+    margin: 1px;
+    height: 48px;
+    font-size: 23px;
+    background-color: darkgray;
+    border-radius: 8px;
+    background-color: #bc7800;
+}
+
+button:active {
+    background-color: darkslategray;
     transform: translateY(2px);
 }
 
