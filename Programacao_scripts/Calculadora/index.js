@@ -2,7 +2,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return{
-            teste: "testedasdaddasda",
+            teste: "2 + 2 = 5",
             numero: 1
         }
     },
