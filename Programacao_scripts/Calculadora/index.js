@@ -10,13 +10,13 @@ createApp({
 
     },
     methods: {
-        lidarBotao(botao) {
-            switch (botao) {
+        lidarBotao(bt) {
+            switch (bt) {
                 case "x":
                 case '/':
                 case '+':
                 case '-':
-                    this.lidarOperador(botao)
+                    this.lidarOperador(bt)
                     break
                 case ',':
                     this.lidarDecimal()
@@ -27,17 +27,45 @@ createApp({
                 case 'AC':
                     this.lidarClear()
                     break
+                case '+/-':
+                    this.inverter()
+                    break
                 default:
-                    this.lidarNumero(botao)
+                    this.lidarNumero(bt)
             }
         },
+
+        lidarIgual(numAnterior, numAtual) {
+
+        },
+
         lidarNumero(bt) {
             this.display += bt
+        },
+
+        lidarOperador(bt) {
+            if (bt == "x") {
+                this.numeroAnterior = this.display;
+                this.display = '0';
+                this.numeroAtual = this.display;
+                this.numeroAnterior
+
+            }
         },
 
         lidarClear() {
             this.display = '0'
         },
+
+        inverter() {
+            this.display = 'inverteu'
+        },
+
+        lidarDecimal() {
+
+        }
+
+
 
     }
 }).mount("#app")
