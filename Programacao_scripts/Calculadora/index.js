@@ -74,12 +74,29 @@ createApp({
         lidarOperador(bt) {
             switch (bt) {
                 case "x":
+                    this.operador = "x"
                     this.numeroAnterior = this.display
                     Number(this.numeroAnterior)
                     this.display = "0"
-                    return "x"
                     break
-
+                case "/":
+                    this.operador = "/"
+                    this.numeroAnterior = this.display
+                    Number(this.numeroAnterior)
+                    this.display = "0"
+                    break
+                case "+":
+                    this.operador = "+"
+                    this.numeroAnterior = this.display
+                    Number(this.numeroAnterior)
+                    this.display = "0"
+                    break
+                case "-":
+                    this.operador = "-"
+                    this.numeroAnterior = this.display
+                    Number(this.numeroAnterior)
+                    this.display = "0"
+                    break
             }
         },
 
