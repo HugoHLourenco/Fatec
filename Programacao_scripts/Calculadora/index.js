@@ -35,7 +35,7 @@ createApp({
             }
         },
 
-        lidarIgual(bt) {
+        lidarIgual() {
             if (this.operador === "x") {
                     this.numeroAtual = this.display
                     Number(this.numeroAtual)
@@ -48,21 +48,18 @@ createApp({
                     this.display = this.numeroAtual / this.numeroAnterior
                     this.numeroAtual = ""
                     this.numeroAnterior = ""
-            }
-                case "+":
+            } else if (this.operador === "+") {
                     this.numeroAtual = this.display
                     Number(this.numeroAtual)
                     this.display = this.numeroAtual + this.numeroAnterior
                     this.numeroAtual = ""
                     this.numeroAnterior = ""
-                    break
-                case "-":
+            } else if (this.operador === "-") {
                     this.numeroAtual = this.display
                     Number(this.numeroAtual)
                     this.display = this.numeroAtual - this.numeroAnterior
                     this.numeroAtual = ""
                     this.numeroAnterior = ""
-                    break
             }
         },
 
