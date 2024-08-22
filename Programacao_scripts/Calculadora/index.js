@@ -5,7 +5,10 @@ createApp({
             display: '0',
             numeroAtual: '',
             numeroAnterior: '',
-            operador: null
+            operador: null,
+            n1: 0,
+            n2: 0,
+            res: ""
         }
 
     },
@@ -35,7 +38,9 @@ createApp({
             }
         },
 
-        lidarIgual(numAnterior, numAtual) {
+        lidarIgual() {
+            
+            }
 
         },
 
@@ -44,13 +49,7 @@ createApp({
         },
 
         lidarOperador(bt) {
-            if (bt == "x") {
-                this.numeroAnterior = this.display;
-                this.display = '0';
-                this.numeroAtual = this.display;
-                this.numeroAnterior
 
-            }
         },
 
         lidarClear() {
