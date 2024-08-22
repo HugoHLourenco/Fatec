@@ -6,9 +6,6 @@ createApp({
             numeroAtual: '',
             numeroAnterior: '',
             operador: null,
-            n1: 0,
-            n2: 0,
-            res: ""
         }
 
     },
@@ -38,22 +35,61 @@ createApp({
             }
         },
 
-        lidarIgual() {
-            
+        lidarIgual(bt) {
+            if (this.operador === "x") {
+                    this.numeroAtual = this.display
+                    Number(this.numeroAtual)
+                    this.display = this.numeroAtual * this.numeroAnterior
+                    this.numeroAtual = ""
+                    this.numeroAnterior = ""
+            } else if (this.operador === "/") {
+                    this.numeroAtual = this.display
+                    Number(this.numeroAtual)
+                    this.display = this.numeroAtual / this.numeroAnterior
+                    this.numeroAtual = ""
+                    this.numeroAnterior = ""
             }
-
+                case "+":
+                    this.numeroAtual = this.display
+                    Number(this.numeroAtual)
+                    this.display = this.numeroAtual + this.numeroAnterior
+                    this.numeroAtual = ""
+                    this.numeroAnterior = ""
+                    break
+                case "-":
+                    this.numeroAtual = this.display
+                    Number(this.numeroAtual)
+                    this.display = this.numeroAtual - this.numeroAnterior
+                    this.numeroAtual = ""
+                    this.numeroAnterior = ""
+                    break
+            }
         },
 
         lidarNumero(bt) {
-            this.display += bt
+            if (this.display === "0") {
+                this.display = bt
+            } else {
+                this.display += bt
+            }
         },
 
         lidarOperador(bt) {
+            switch (bt) {
+                case "x":
+                    this.numeroAnterior = this.display
+                    Number(this.numeroAnterior)
+                    this.display = "0"
+                    return "x"
+                    break
 
+            }
         },
 
         lidarClear() {
             this.display = '0'
+            this.numeroAtual = ""
+            this.numeroAnterior = ""
         },
 
         inverter() {
