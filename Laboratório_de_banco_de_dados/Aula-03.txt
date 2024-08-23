@@ -1,0 +1,10 @@
+fazer stored procedure:
+	delimiter @(";" se torna "@")
+	create procedure prc_del_data()
+	begin
+		/* intruções SQL */
+	end @
+
+	delimiter;
+
+	call prc_del_data();
