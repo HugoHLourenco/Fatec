@@ -7,7 +7,8 @@ createApp({
             numeroAnterior: '',
             operador: null,
             numero: 0,
-            divisor: 0
+            divisor: 0,
+            decimal: 0
         }
 
     },
@@ -123,7 +124,9 @@ createApp({
         },
 
         lidarDecimal() {
-
+            this.decimal = this.display
+            this.decimal += ','
+            
         }
 
 
