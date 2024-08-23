@@ -45,7 +45,7 @@ createApp({
             } else if (this.operador === "/") {
                     this.numeroAtual = this.display
                     Number(this.numeroAtual)
-                    this.display = this.numeroAtual / this.numeroAnterior
+                    this.display = this.numeroAnterior / this.numeroAtual
                     this.numeroAtual = ""
                     this.numeroAnterior = ""
             } else if (this.operador === "+") {
@@ -57,7 +57,7 @@ createApp({
             } else if (this.operador === "-") {
                     this.numeroAtual = this.display
                     Number(this.numeroAtual)
-                    this.display = this.numeroAtual - this.numeroAnterior
+                    this.display = this.numeroAnterior - this.numeroAtual
                     this.numeroAtual = ""
                     this.numeroAnterior = ""
             }
