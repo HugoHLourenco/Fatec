@@ -1,4 +1,4 @@
-const  { createApp } = Vue;
+const {createApp} = Vue;
 createApp({
     data() {
         return {
@@ -6,6 +6,8 @@ createApp({
             numeroAtual: '',
             numeroAnterior: '',
             operador: null,
+            numero: 0,
+            divisor: 0
         }
 
     },
@@ -37,29 +39,36 @@ createApp({
 
         lidarIgual() {
             if (this.operador === "x") {
-                    this.numeroAtual = this.display
-                    Number(this.numeroAtual)
-                    this.display = this.numeroAtual * this.numeroAnterior
-                    this.numeroAtual = ""
-                    this.numeroAnterior = ""
+                this.numeroAtual = this.display
+                Number(this.numeroAtual)
+                this.display = this.numeroAtual * this.numeroAnterior
+                this.numeroAtual = ""
+                this.numeroAnterior = ""
             } else if (this.operador === "/") {
-                    this.numeroAtual = this.display
-                    Number(this.numeroAtual)
-                    this.display = this.numeroAnterior / this.numeroAtual
-                    this.numeroAtual = ""
-                    this.numeroAnterior = ""
+                this.numeroAtual = this.display
+                Number(this.numeroAtual)
+                this.divisor = this.numeroAnterior / this.numeroAtual
+                if (this.divisor === parseInt(this.divisor)) {
+                    this.display = this.divisor
+                } else if (this.numeroAtual === '0') {
+                    this.display = 'erro'
+                } else {
+                    this.display = this.divisor.toFixed(8)
+                }
+                this.numeroAtual = ""
+                this.numeroAnterior = ""
             } else if (this.operador === "+") {
-                    this.numeroAtual = this.display
-                    Number(this.numeroAtual)
-                    this.display = this.numeroAtual + this.numeroAnterior
-                    this.numeroAtual = ""
-                    this.numeroAnterior = ""
+                this.numeroAtual = this.display
+                Number(this.numeroAtual)
+                this.display = +this.numeroAtual + +this.numeroAnterior
+                this.numeroAtual = ""
+                this.numeroAnterior = ""
             } else if (this.operador === "-") {
-                    this.numeroAtual = this.display
-                    Number(this.numeroAtual)
-                    this.display = this.numeroAnterior - this.numeroAtual
-                    this.numeroAtual = ""
-                    this.numeroAnterior = ""
+                this.numeroAtual = this.display
+                Number(this.numeroAtual)
+                this.display = this.numeroAnterior - this.numeroAtual
+                this.numeroAtual = ""
+                this.numeroAnterior = ""
             }
         },
 
@@ -107,13 +116,15 @@ createApp({
         },
 
         inverter() {
-            this.display = 'inverteu'
+            this.numero = this.display
+            Number(this.numero);
+            this.numero = this.numero * -1
+            this.display = this.numero
         },
 
         lidarDecimal() {
 
         }
-
 
 
     }
