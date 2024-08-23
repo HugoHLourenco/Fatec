@@ -7,7 +7,7 @@ body {
     margin-top: 5%;
     background-color: dimgray;
     border: 1px solid black;
-    width: 256px;
+    width: 264px;
     height: auto;
     border-radius: 10px;
     box-shadow: 10px 10px 15px black;
@@ -23,7 +23,7 @@ body {
     text-align: right;
     background-color: ghostwhite;
     border-radius: 15px;
-    border: 1px solid black;
+    border: 5px solid black;
     margin-top: 20px;
     margin-bottom: 20px;
     height: 40px;
@@ -57,7 +57,7 @@ button:hover {
 }
 
 .func2{
-    width: 128px;
+    width: 130px;
     margin: 1px;
     height: 48px;
     font-size: 23px;
