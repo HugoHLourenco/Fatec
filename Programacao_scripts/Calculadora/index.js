@@ -124,8 +124,13 @@ createApp({
 
         lidarDecimal() {
             this.decimal = this.display
-            this.decimal += '.'
-            this.display = this.decimal
+            if (this.decimal.includes('.')) {
+                this.display = this.decimal
+            } else {
+                this.decimal = this.display
+                this.decimal += '.'
+                this.display = this.decimal
+            }
         }
     }
 }).mount("#app")
