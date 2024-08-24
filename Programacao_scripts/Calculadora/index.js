@@ -1,4 +1,4 @@
-const {createApp} = Vue;
+const {createApp} = Vue
 createApp({
     data() {
         return {
@@ -10,7 +10,6 @@ createApp({
             divisor: 0,
             decimal: 0
         }
-
     },
     methods: {
         lidarBotao(bt) {
@@ -118,17 +117,15 @@ createApp({
 
         inverter() {
             this.numero = this.display
-            Number(this.numero);
+            Number(this.numero)
             this.numero = this.numero * -1
             this.display = this.numero
         },
 
         lidarDecimal() {
             this.decimal = this.display
-            this.decimal += ','
-            
+            this.decimal += '.'
+            this.display = this.decimal
         }
-
-
     }
 }).mount("#app")

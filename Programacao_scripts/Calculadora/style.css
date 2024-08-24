@@ -4,7 +4,7 @@ body {
 
 .calculadora{
     margin: auto;
-    margin-top: 5%;
+    margin-top: 10%;
     background-color: dimgray;
     border: 1px solid black;
     width: 264px;
@@ -15,7 +15,6 @@ body {
 
 .linha{
     display: flex;
-
 }
 
 .display{
@@ -24,8 +23,8 @@ body {
     background-color: ghostwhite;
     border-radius: 15px;
     border: 5px solid black;
-    margin-top: 20px;
     margin-bottom: 20px;
+    margin-top: 5px;
     height: 40px;
     width: 250px;
     margin-left: 2px;
@@ -68,5 +67,9 @@ button:hover {
 button:active {
     background-color: dimgray;
     transform: translateY(2px);
+}
+
+.marca {
+    text-align: right;
 }
 
