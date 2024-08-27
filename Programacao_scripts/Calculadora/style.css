@@ -7,7 +7,7 @@ body {
     margin-top: 10%;
     background-color: dimgray;
     border: 1px solid black;
-    width: 300px;
+    width: 304px;
     height: auto;
     border-radius: 10px;
     box-shadow: 10px 10px 15px black;
@@ -32,10 +32,10 @@ body {
 }
 
 .bt {
-    width: 64px;
+    width: 75px;
     margin: 1px;
     height: 64px;
-    font-size: 23px;
+    font-size: 30px;
     background-color: darkgray;
     border-radius: 8px;
     color: whitesmoke;
@@ -47,19 +47,19 @@ button:hover {
 }
 
 .func{
-    width: 64px;
+    width: 75px;
     margin: 1px;
     height: 64px;
-    font-size: 23px;
+    font-size: 30px;
     border-radius: 8px;
     background-color: orange;
 }
 
 .func2{
-    width: 130px;
+    width: 150px;
     margin: 1px;
     height: 48px;
-    font-size: 23px;
+    font-size: 30px;
     border-radius: 8px;
     background-color: #bc7800;
 }
