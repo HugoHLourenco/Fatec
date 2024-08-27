@@ -53,7 +53,7 @@ createApp({
                 } else if (this.numeroAtual === '0') {
                     this.display = 'Erro'
                 } else {
-                    this.display = this.divisor.toFixed(8)
+                    this.display = this.divisor
                 }
                 this.numeroAtual = ""
                 this.numeroAnterior = ""
@@ -73,7 +73,7 @@ createApp({
         },
 
         lidarNumero(bt) {
-            if (this.display === "0" || this.display === 'erro') {
+            if (this.display === "0" || this.display === 'Erro') {
                 this.display = bt
             } else {
                 this.display += bt
