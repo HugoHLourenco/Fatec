@@ -51,7 +51,7 @@ createApp({
                 if (this.divisor === parseInt(this.divisor)) {
                     this.display = this.divisor
                 } else if (this.numeroAtual === '0') {
-                    this.display = 'erro'
+                    this.display = 'Erro'
                 } else {
                     this.display = this.divisor.toFixed(8)
                 }
