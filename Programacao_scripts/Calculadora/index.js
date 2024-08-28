@@ -32,6 +32,12 @@ createApp({
                 case '+/-':
                     this.inverter()
                     break
+                case 'CE':
+                    this.clear()
+                    break
+                case 'vorta':
+                    this.vorta()
+                    break
                 default:
                     this.lidarNumero(bt)
             }
@@ -131,6 +137,14 @@ createApp({
                 this.decimal += '.'
                 this.display = this.decimal
             }
+        },
+
+        clear() {
+            this.display = '0'
+        },
+
+        vorta(bt) {
+            this.display -= bt
         }
     }
 }).mount("#app")
