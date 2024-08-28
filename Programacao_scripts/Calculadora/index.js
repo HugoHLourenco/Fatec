@@ -36,7 +36,6 @@ createApp({
                     this.lidarNumero(bt)
             }
         },
-
         
         lidarIgual() {
             if (this.operador === "x") {
