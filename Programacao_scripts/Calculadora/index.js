@@ -143,8 +143,8 @@ createApp({
             this.display = '0'
         },
 
-        vorta(bt) {
-            this.display -= bt
+        vorta() {
+            
         }
     }
 }).mount("#app")
