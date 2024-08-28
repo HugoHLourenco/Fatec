@@ -37,6 +37,7 @@ createApp({
             }
         },
 
+        
         lidarIgual() {
             if (this.operador === "x") {
                 this.numeroAtual = this.display
