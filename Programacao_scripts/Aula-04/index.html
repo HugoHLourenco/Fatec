@@ -20,14 +20,14 @@
         <h1 v-if="!nome">Olá, Fulano</h1>
         <h1 v-else-if="sobrenome">Olá, {{ nome }} {{sobrenome}}</h1>
 
+        <br>
         <button @click="onOff()" v-if="!lampada">Ligar</button>
         <button @click="onOff()" v-else>Desligar</button>
-        <br>
-        <img src="off.png" width="250px" v-if="!lampada">
-        <img src="on.png" width="250px" v-else>
-        <br>
+        <br> <br>
         <input type="text" v-model="mensagem">
-
+        <br>
+        <img src="off.png" width="250px" v-if="!lampada || mensagem === 'apagada'" >
+        <img src="on.png" width="250px" v-else-if="lampada || mensagem === 'acesa'">
     </div>
 </body>
 </html>
