@@ -1,0 +1,21 @@
+Criando uma procedure que eleva um numero {
+	create procedure eleva(
+		in numero int,
+		in potencia int
+		)
+		begin
+		select pow(numero, potencia);
+		end @ 
+}
+
+Chamando a procedure {
+	call eleva(5, 2)	
+}
+
+Outra procedure para elevação {
+	create procedure elevar_ao_quadrado(
+		inout p_numero int)
+		begin
+		set p_numero = p_numero * p_numero;
+		end @
+}
