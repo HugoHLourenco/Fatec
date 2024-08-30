@@ -27,7 +27,8 @@
         <input type="text" v-model="mensagem">
         <br>
         <img src="off.png" width="250px" v-if="!lampada || mensagem === 'apagada'" >
-        <img src="on.png" width="250px" v-else-if="lampada || mensagem === 'acesa'">
+        <img src="on.png" width="250px" v-else-if="lampada">
+        <img src="on.png" width="250px" v-else-if="mensagem === 'a'">
     </div>
 </body>
 </html>
