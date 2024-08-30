@@ -5,13 +5,14 @@ createApp({
             nome: "",
             sobrenome: '',
             lampada: false,
-            mensagem: ""
+            mensagem: ''
         }
     },
 
     methods: {
         onOff(lampada) {
             this.lampada = !this.lampada
-        }
+        },
+
     }
 }).mount("#app")
