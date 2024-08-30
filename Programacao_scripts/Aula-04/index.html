@@ -18,7 +18,7 @@
         <label>{{ sobrenome }}</label>
 
         <h1 v-if="!nome">Olá, Fulano</h1>
-        <h1 v-else-if="sobrenome">Olá, {{ nome }}</h1>
+        <h1 v-else-if="sobrenome">Olá, {{ nome }} {{sobrenome}}</h1>
 
         <button @click="onOff()" v-if="!lampada">Ligar</button>
         <button @click="onOff()" v-else>Desligar</button>
