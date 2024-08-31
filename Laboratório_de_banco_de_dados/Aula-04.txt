@@ -22,4 +22,10 @@ Outra procedure para elevação {
 
 Mostrar todas as colunas de todas as tabelas {
 	show columns from tables;
+	show columns from columns;
+}
+
+Contar quantas colunas tem na tabela {
+	select count(*) from columns;
+	SECRETO(select * from columns;)
 }
