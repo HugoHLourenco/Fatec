@@ -19,3 +19,7 @@ Outra procedure para elevação {
 		set p_numero = p_numero * p_numero;
 		end @
 }
+
+Mostrar todas as colunas de todas as tabelas {
+	show columns from tables;
+}
