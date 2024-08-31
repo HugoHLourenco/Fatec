@@ -1,4 +1,15 @@
 body {
     background-color: slategray;
     color: whitesmoke;
+    font-size: 20px;
+}
+
+img {
+    border-radius: 5%;
+    box-shadow: 10px 10px 15px black;
+}
+
+button {
+    box-shadow: 3px 2px 1px black;
+    transform: translateX(3px);
 }
