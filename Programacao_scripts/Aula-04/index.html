@@ -23,11 +23,14 @@
         <br>
         <button @click="onOff()" v-if="!lampada">Ligar</button>
         <button @click="onOff()" v-else>Desligar</button>
-        <br> <br>
+        <br>
+        <img src="on.png" width="250px" v-if="lampada" >
+        <img src="off.png" width="250px" v-else-if="!lampada">
+        <br>
         <input type="text" v-model="mensagem">
         <br>
-        <img src="off.png" width="250px" v-if="!lampada || mensagem === 'desligar'" >
-        <img src="on.png" width="250px" v-else-if="mensagem === 'ascender'">
+        <img src="on.png" width="250px" v-if="mensagem === 'acender'" >
+        <img src="off.png" width="250px" v-else-if="mensagem === 'desligar'">
     </div>
 </body>
 </html>
