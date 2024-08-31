@@ -21,16 +21,18 @@
         <h1 v-else-if="sobrenome">Olá, {{ nome }} {{sobrenome}}</h1>
 
         <br>
+
         <button @click="onOff()" v-if="!lampada">Ligar</button>
         <button @click="onOff()" v-else>Desligar</button>
-        <br>
-        <img src="on.png" width="250px" v-if="lampada" >
-        <img src="off.png" width="250px" v-else-if="!lampada">
-        <br>
+
+        <br><br>
+
+        <img src="on.png" width="250px" v-if="lampada || mensagem === 'acender'" >
+        <img src="off.png" width="250px" v-else-if="!lampada || mensagem === 'desligar'">
+
+        <br><br>
+
         <input type="text" v-model="mensagem">
-        <br>
-        <img src="on.png" width="250px" v-if="mensagem === 'acender'" >
-        <img src="off.png" width="250px" v-else-if="mensagem === 'desligar'">
     </div>
 </body>
 </html>
