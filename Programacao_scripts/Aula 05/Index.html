@@ -7,15 +7,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <ul>
-        <li>
-            <span> NOME </span>
-            <span> IDADE </span>
-            <div class="detalhes">
-                E-MAIL
-            </div>
-        </li>
-    </ul>
+    <div id="app">
+        <ul>
+            <li v-for="iten in nomes"
+                :key="item.id"
+                @click="expandedItem(item)">
+                <span>Nome: {{iten.nome}}</span>
+                <br>
+                <span>Idade: {{iten.idade}}</span>
+                <div v-show="item.expanded" class="detalhes">
+                    E-mail: {{this.email}}
+                </div>
+            </li>
+        </ul>
+    </div>
 </body>
 </html>
 

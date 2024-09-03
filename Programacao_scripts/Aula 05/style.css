@@ -22,3 +22,11 @@ li:hover {
     border: solid 1px darkgray;
     border-radius: 5px;
 }
+
+li.expanded {
+    background-color: #bc7800;
+}
+
+li.expanded .detalhes {
+    display: block;
+}
