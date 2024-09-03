@@ -1,0 +1,24 @@
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #44dc75;
+    margin: 10px 0;
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px #888888;
+    transition: background-color 0.3s ease;
+}
+
+li:hover {
+    background-color: #5db199;
+}
+
+.detalhes {
+    margin: 10px 0;
+    padding: 10px;
+    border: solid 1px darkgray;
+    border-radius: 5px;
+}
