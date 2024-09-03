@@ -9,14 +9,14 @@
 <body>
     <div id="app">
         <ul>
-            <li v-for="iten in nomes"
+            <li v-for="item in nomes"
                 :key="item.id"
                 @click="expandedItem(item)">
-                <span>Nome: {{iten.nome}}</span>
+                <span>Nome: {{item.nome}}</span>
                 <br>
-                <span>Idade: {{iten.idade}}</span>
+                <span>Idade: {{item.idade}}</span>
                 <div v-show="item.expanded" class="detalhes">
-                    E-mail: {{this.email}}
+                    E-mail: {{item.email}}
                 </div>
             </li>
         </ul>
