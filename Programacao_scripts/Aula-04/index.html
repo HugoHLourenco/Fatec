@@ -27,12 +27,13 @@
 
         <br><br>
 
-        <img src="on.png" width="250px" v-if="lampada || mensagem === 'acender'" >
-        <img src="off.png" width="250px" v-else-if="!lampada || mensagem === 'desligar'">
+        <img src="on.png" width="250px" v-if="lampada" >
+        <img src="off.png" width="250px" v-else-if="!lampada">
 
         <br><br>
 
         <input type="text" v-model="mensagem">
+        <button @click="verificar()">Verificar</button>
     </div>
 </body>
 </html>

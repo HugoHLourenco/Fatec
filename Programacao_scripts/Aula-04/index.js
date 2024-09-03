@@ -13,6 +13,13 @@ createApp({
         onOff(lampada) {
             this.lampada = !this.lampada
         },
+        verificar() {
+            if(this.mensagem.toLowerCase() === "desligar") {
+                this.lampada = false;
+            } else if(this.mensagem.toLowerCase() === "acender") {
+                this.lampada = true;
+            }
+        }
 
     }
 }).mount("#app")
