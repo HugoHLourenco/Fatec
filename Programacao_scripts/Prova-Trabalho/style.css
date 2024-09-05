@@ -49,13 +49,21 @@ button:active {
     height: 30px;
     background-color: #44dc75;
     border-radius: 10px;
+    border: black solid 2px;
     display: flex;
     width: 67%;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .sprite {
     height: 190px;
     background-color: #555;
     border-radius: 8px;
+}
+
+.xp-bar {
+    background-color: deepskyblue;
+    border-radius: 8px;
+    margin-bottom: 6px;
+    border: black solid 2px;
 }
