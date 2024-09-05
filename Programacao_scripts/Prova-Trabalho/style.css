@@ -1,0 +1,61 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, rgb(152, 28, 28), #050909);
+}
+
+#app {
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.character {
+    background-color: #fff;
+    border: 2px solid #333;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.actions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+button {
+    padding: 10px;
+    border: black solid 1px;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: slategray;
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow: #050909 0px -1px;
+}
+
+.life-bar {
+    height: 30px;
+    background-color: #44dc75;
+    border-radius: 10px;
+    display: flex;
+    width: 67%;
+    margin-bottom: 10px;
+}
+
+.sprite {
+    height: 190px;
+    background-color: #555;
+    border-radius: 8px;
+}

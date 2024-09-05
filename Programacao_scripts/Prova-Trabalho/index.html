@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prova - <Nome></title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div class="character">
+            <div class="life-bar">{{oponent.life}}</div>
+            <div class="sprite"> Desenho Buneko</div>
+            <h1>Alvo</h1>
+        </div>
+        <div class="character">
+
+            <div class="life-bar">{{pokemon.life}}</div>
+            <div class="sprite"> Desenho Buneko</div>
+            <h1>Buneko</h1>
+            <div class="actions">
+                <button @click="">FIGHT</button>
+                <button @click="">POKEMON</button>
+                <button @click="">BAG</button>
+                <button @click="">RUN</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="index.js"></script>
