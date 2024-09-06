@@ -32,5 +32,11 @@ Information Schema{
 }
 
 5) Como ver o texto de uma rotina {
-	
+	select routine_definition, routine_name
+	from routines;
 }
+
+alter table site
+add foreign key fk_site_pai
+(site_pai) references
+site (site_nome);
