@@ -36,7 +36,9 @@ Information Schema{
 	from routines;
 }
 
-alter table site
-add foreign key fk_site_pai
-(site_pai) references
-site (site_nome);
+Query que calcula a média salarial por departamento da tabela {
+	select dep, avg(salario)
+	from funcionario
+	group by dep;
+}
+
