@@ -1,0 +1,17 @@
+Information Schema{
+	use information_schema;
+}
+
+
+Quantidade de Tabelas por esquema {
+	select table_schema, count(*) as qtde
+	from tables
+	group by table_schema;
+}
+
+
+Quantidade de Colunas por esquema {
+	select table_schema, count(*) as qtde
+	from columns
+	group by table_schema;
+}
