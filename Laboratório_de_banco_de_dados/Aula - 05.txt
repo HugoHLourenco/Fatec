@@ -24,5 +24,13 @@ Information Schema{
 }
 
 4) Quantidade de Referencial Constrains por esquema {
+	select count(*) from referential_constraints;
+
+	select constraint_schema, count(*) as qtde
+	from referential_constraints
+	group by constraint_schema;
+}
+
+5) Como ver o texto de uma rotina {
 	
 }
