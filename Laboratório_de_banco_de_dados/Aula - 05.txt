@@ -3,15 +3,26 @@ Information Schema{
 }
 
 
-Quantidade de Tabelas por esquema {
+1) Quantidade de Tabelas por esquema {
 	select table_schema, count(*) as qtde
 	from tables
 	group by table_schema;
 }
 
 
-Quantidade de Colunas por esquema {
+2) Quantidade de Colunas por esquema {
 	select table_schema, count(*) as qtde
 	from columns
 	group by table_schema;
+}
+
+3) Quantidade de Colunas e Tabelas do Esquema Aulalab {
+	select table_schema, table_name count(*) as qtde
+	from columns
+	where table_schema = "aulalab"
+	group by table_schema, table name;
+}
+
+4) Quantidade de Referencial Constrains por esquema {
+	
 }
