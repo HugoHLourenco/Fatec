@@ -16,7 +16,7 @@ html, body {
 .character {
     background-color: #fff;
     border: 2px solid #333;
-    margin: 20px;
+    margin: 2px;
     padding: 10px;
     border-radius: 5px;
     width: 200px;
@@ -66,4 +66,13 @@ button:active {
     border-radius: 8px;
     margin-bottom: 6px;
     border: black solid 2px;
+}
+
+.oponent {
+    background-color: #fff;
+    border: 2px solid #333;
+    margin: 2px;
+    padding: 5px;
+    border-radius: 5px;
+    width: 400px;
 }
