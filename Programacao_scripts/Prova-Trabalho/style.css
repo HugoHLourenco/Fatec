@@ -2,8 +2,8 @@ html, body {
     height: 100%;
     margin: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /*justify-content: center;*/
+    /*align-items: center;*/
     background: linear-gradient(to bottom, rgb(152, 28, 28), #050909);
 }
 
@@ -20,6 +20,7 @@ html, body {
     padding: 10px;
     border-radius: 5px;
     width: 200px;
+    align-self: center;
 }
 
 .oponent-life-bar {
@@ -63,11 +64,10 @@ button:active {
     border-radius: 10px;
     border: black solid 2px;
     display: flex;
-    width: 10%;
+    width: 100%;
     margin-bottom: 5px;
     justify-content: flex-end;
     align-items: center;
-    font-size: min(100%);
 }
 
 .sprite {
@@ -90,4 +90,8 @@ button:active {
     padding: 5px;
     border-radius: 5px;
     width: 400px;
+    justify-content: end;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
