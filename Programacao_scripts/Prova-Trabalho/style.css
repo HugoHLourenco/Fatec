@@ -13,6 +13,39 @@ html, body {
     text-align: center;
 }
 
+/* Área do oponent ---------------------------------------------------------------------*/
+.div-oponent {
+    background-color: #fff;
+    border: 2px solid #333;
+    margin: 2px;
+    padding: 5px;
+    border-radius: 5px;
+    width: 400px;
+    justify-content: end;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.oponent-life-bar {
+    height: 30px;
+    background-color: #44dc75;
+    border-radius: 10px;
+    border: black solid 2px;
+    display: flex;
+    width: 100%;
+    margin-bottom: 5px;
+    /* justify-content: flex-end;
+    align-items: center; */
+}
+
+.oponent-life {
+    background-color: #888;
+    width: 15%;
+}
+
+
+/* Área do pokemon -------------------------------------------------------------------- */
 .div-pokemon {
     background-color: #fff;
     border: 2px solid #333;
@@ -23,18 +56,20 @@ html, body {
     align-self: center;
 }
 
-.oponent-life-bar {
+.pokemon-life-bar {
     height: 30px;
     background-color: #44dc75;
     border-radius: 10px;
     border: black solid 2px;
     display: flex;
-    width: 67%;
+    width: 100%;
     margin-bottom: 5px;
     justify-content: flex-end;
     align-items: center;
 }
 
+
+/*  Botões ----------------------------------------------------------------------------- */
 .actions {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -58,17 +93,7 @@ button:active {
     box-shadow: #050909 0px -1px;
 }
 
-.pokemon-life-bar {
-    height: 30px;
-    background-color: #44dc75;
-    border-radius: 10px;
-    border: black solid 2px;
-    display: flex;
-    width: 100%;
-    margin-bottom: 5px;
-    justify-content: flex-end;
-    align-items: center;
-}
+
 
 .sprite {
     height: 190px;
@@ -83,15 +108,3 @@ button:active {
     border: black solid 2px;
 }
 
-.div-oponent {
-    background-color: #fff;
-    border: 2px solid #333;
-    margin: 2px;
-    padding: 5px;
-    border-radius: 5px;
-    width: 400px;
-    justify-content: end;
-    position: absolute;
-    top: 0;
-    right: 0;
-}
