@@ -8,6 +8,7 @@ createApp({
             fighting: false,
             bagStatus: false,
             battling: false,
+            potion: true,
         }
     },
     methods: {
@@ -25,6 +26,11 @@ createApp({
 
         numTemMais(){
             alert("Você não tem outros pokémons!")
+        },
+
+        usePotion(){
+            this.bagStatus = false
+            this.potion = false
         },
     }
 }).mount('#app')

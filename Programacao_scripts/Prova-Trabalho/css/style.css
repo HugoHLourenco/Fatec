@@ -261,3 +261,23 @@ button:active {
     width: 10%;
     height: 10%;
 }
+
+.potionIMG{
+    position: absolute;
+    width: 10%;
+    height: 19%;
+    top: 0;
+    left: 1%;
+}
+
+.maxPotionName {
+    position: absolute;
+    left: 15% ;
+    top: -10%;
+}
+
+.btnUse {
+    position: absolute;
+    right: 5%;
+    top: 5%;
+}

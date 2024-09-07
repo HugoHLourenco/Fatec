@@ -20,7 +20,7 @@
                     <div class="oponent-life-bar"></div>
                 </div>
             </div>
-                <img src="/images/Giratina.gif" alt="" class="oponent-sprite">
+            <img src="/images/Giratina.gif" alt="" class="oponent-sprite">
 
             <div class="div-pokemon">
                 <h1 class="pokemon-name">{{pokemon.name}}</h1>
@@ -39,7 +39,7 @@
 
             <img src="/images/Rayquaza.gif" alt="" class="pokemon-sprite">
 
-            <div class="output" v-if="fighting" >
+            <div class="output" v-if="fighting">
                 <div class="buttons">
                     <button class="btnAct" :disabled="bagStatus">Thunder</button>
                     <button class="btnAct" :disabled="bagStatus">Twister</button>
@@ -51,19 +51,26 @@
             <div class="bag" v-if="bagStatus">
                 <h1 class="textBag">BAG</h1>
                 <button class="backBag" @click="bag()"><</button>
-                <div class="subBag">
-                    EMPTY
-                    ______________________________________
-                    <br>
-                    <br>
-                    ______________________________________
-                    <br>
-                    <br>
-                    ______________________________________
-                    <br>
-                    <br>
-                    ______________________________________
-                </div>
+                        <div class="subBag" v-if="potion">
+                            <h1>
+                                <img src="/images/maxPotion.png" alt="" class="potionIMG">
+                                <h1 class="maxPotionName">01 x Max Potion</h1>
+                                <button class="btnUse" @click="usePotion()">USE</button>
+                                ______________________________________
+                                <br>
+                                <br>
+                                ______________________________________
+                                <br>
+                                <br>
+                                ______________________________________
+                                <br>
+                                <br>
+                                ______________________________________
+                            </h1>
+                        </div>
+                        <div class="subBag" v-else>
+                            <h1>EMPTY</h1>
+                        </div>
             </div>
         </div>
     </main>
