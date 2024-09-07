@@ -158,7 +158,6 @@ body {
 }
 
 
-
 /*  Botões ----------------------------------------------------------------------------- */
 .actions {
     display: grid;
@@ -189,4 +188,15 @@ button:hover {
 button:active {
     transform: translateY(3px);
     box-shadow: #050909 0px -2px;
+}
+
+/* OutPut ---------------------------------------------------------------------------------- */
+
+.output {
+    background-color: #232c3a;
+    width: 66%;
+    height: 31%;
+    position: absolute;
+    bottom: 1%;
+    left: 1%;
 }
