@@ -1,41 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Prova - Trabalho</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
     <img src="/images/battleGround Campim (Noite).jpg" alt="" class="battleGround">
 
-    <div id="app">  
-        <div class="div-oponent">
-            <h1 class="oponent-name">{{oponent.name}}</h1>
-            <div class="oponent-life">{{oponent.life}} / {{oponent.maxLife}}</div>
-            <div class="oponent-life-back">
-                <div class="oponent-life-bar"></div>
+    <main>
+        <div id="app">
+            <div class="div-oponent">
+                <h1 class="oponent-name">{{oponent.name}}</h1>
+                <div class="oponent-life">{{oponent.life}} / {{oponent.maxLife}}</div>
+                <div class="oponent-life-back">
+                    <div class="oponent-life-bar"></div>
+                </div>
+            </div>
+
+            <div class="oponent-sprite"> Desenho Buneko</div>
+
+            <div class="div-pokemon">
+                <div class="pokemon-life-bar">{{pokemon.life}}</div>
+                <div class="xp-bar">{{pokemon.xp}}</div>
+                <div class="sprite"> Desenho Buneko</div>
+                <h1>{{pokemon.name}}</h1>
+                <div class="actions">
+                    <button @click="">FIGHT</button>
+                    <button @click="">POKEMON</button>
+                    <button @click="">BAG</button>
+                    <button @click="">RUN</button>
+                </div>
             </div>
         </div>
+    </main>
 
-        <div class="oponent-sprite"> Desenho Buneko</div>
 
-        <div class="div-pokemon">
-            <div class="pokemon-life-bar">{{pokemon.life}}</div>
-            <div class="xp-bar">{{pokemon.xp}}</div>
-            <div class="sprite"> Desenho Buneko</div>
-            <h1>{{pokemon.name}}</h1>
-            <div class="actions">
-                <button @click="">FIGHT</button>
-                <button @click="">POKEMON</button>
-                <button @click="">BAG</button>
-                <button @click="">RUN</button>
-            </div>
-        </div>
-    </div>
-
-    
 </body>
+
 </html>
 
 <script src="/js/index.js"></script>
