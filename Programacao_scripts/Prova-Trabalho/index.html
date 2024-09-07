@@ -10,12 +10,12 @@
     <div id="app">
         <div class="div-oponent">
             <div class="oponent-life-bar"></div>
-            <div class="oponent-life">{{oponent.life}}  %</div>
-            <div class="sprite"> Desenho Buneko</div>
-            <h1>Alvo</h1>
+            <div class="oponent-life">{{oponent.life}} / {{oponent.maxLife}}</div>
+            <div class="oponent-sprite"> Desenho Buneko</div>
+            <h1 class="oponent-name">{{oponent.name}}</h1>
         </div>
         <div class="div-pokemon">
-            <div class="pokemon-life-bar">{{pokemon.life}} %</div>
+            <div class="pokemon-life-bar">{{pokemon.life}}</div>
             <div class="xp-bar">{{pokemon.xp}}</div>
             <div class="sprite"> Desenho Buneko</div>
             <h1>{{pokemon.name}}</h1>
