@@ -35,7 +35,31 @@ createApp({
         },
 
         attackThunder() {
+            this.oponent.life -= 46
+            if (this.oponent.life <= 0) {
+                this.oponent.life = 0
+            }
+        },
+
+        attackTwister() {
+            this.oponent.life -= 105
+            if (this.oponent.life <= 0) {
+                this.oponent.life = 0
+            }
+        },
+
+        attackCrunch() {
+            this.oponent.life -= 130
+            if (this.oponent.life <= 0) {
+                this.oponent.life = 0
+            }
+        },
+
+        attackBulkUp() {
             this.oponent.life -= 111
+            if (this.oponent.life <= 0) {
+                this.oponent.life = 0
+            }
         },
     }
 }).mount('#app')

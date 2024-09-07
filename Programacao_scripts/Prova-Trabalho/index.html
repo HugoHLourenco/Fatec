@@ -42,9 +42,9 @@
             <div class="output" v-if="fighting">
                 <div class="buttons">
                     <button class="btnAct" :disabled="bagStatus" @click="attackThunder()">Thunder</button>
-                    <button class="btnAct" :disabled="bagStatus">Twister</button>
-                    <button class="btnAct" :disabled="bagStatus">Over Heat</button>
-                    <button class="btnAct" :disabled="bagStatus">Bulk Up</button>
+                    <button class="btnAct" :disabled="bagStatus" @click="attackTwister()">Twister</button>
+                    <button class="btnAct" :disabled="bagStatus" @click="attackCrunch()">Crunch</button>
+                    <button class="btnAct" :disabled="bagStatus" @click="attackBulkUp()">Bulk Up</button>
                 </div>
             </div>
 
