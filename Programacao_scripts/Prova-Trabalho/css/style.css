@@ -25,6 +25,7 @@ html, body {
 
 /* Área do oponent ---------------------------------------------------------------------*/
 .div-oponent {
+
     margin: 2px;
     padding: 5px;
     border-radius: 5px;
@@ -32,26 +33,40 @@ html, body {
     justify-content: end;
     position: absolute;
     top: 0;
-    right: 1%;
     height: 45%;
 }
 
+.oponent-life-back {
+    padding: 2px;
+    height: 40px;
+    background-color: #555;
+    border-radius: 10px;
+    border: black solid 2px;
+    width: 99%;
+    position: absolute;
+    top: 14.5%;
+    justify-content: center;
+    align-items: center;
+}
+
 .oponent-life-bar {
-    height: 30px;
+    height: 27px;
     background-color: #44dc75;
     border-radius: 10px;
     border: black solid 2px;
-    display: flex;
-    width: 100%;
-    margin-bottom: 5px;
+    width: 98%;
+    position: absolute;
+    top: 14.5%;
 }
+
+
 
 .oponent-life {
     padding: 3px;
     background-color: #888;
     position: absolute;
-    top: 12.5%;
-    right: 0.5%;
+    top: 8px;
+    right: -7px;
     font-weight: 700;
     font-size: 23px;
     border-radius: 10px;
@@ -63,7 +78,7 @@ html, body {
 .oponent-name {
     background-color: #999;
     position: absolute;
-    top: 6.5%;
+    top: -15px;
     font-weight: 700;
     border-radius: 5px;
     border: #050909 solid 1px;
