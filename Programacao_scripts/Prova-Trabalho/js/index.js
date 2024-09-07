@@ -3,7 +3,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            pokemon: { life: 351, maxLife: 351, name: 'Rayquaza', attack: 336, defense: 216, speed: 226, },
+            pokemon: { life: 221, maxLife: 351, name: 'Rayquaza', attack: 336, defense: 216, speed: 226, },
             oponent: { life: 441, maxLife: 441, name: 'Giratina', attack: 276, defense: 236, speed: 216,},
             fighting: false,
             bagStatus: false,
@@ -32,34 +32,51 @@ createApp({
         usePotion(){
             this.bagStatus = false
             this.potion = false
+            this.pokemon.life = 351
         },
 
+        // Pokemon Ataques -------------------------------------------------------------
         attackThunder() {
-            this.oponent.life -= 46
+            this.oponent.life -= Math.floor(((this.pokemon.attack / this.oponent.defense) * 50))
             if (this.oponent.life <= 0) {
                 this.oponent.life = 0
             }
         },
 
         attackTwister() {
-            this.oponent.life -= 105
+            this.oponent.life -= Math.floor(((this.pokemon.attack / this.oponent.defense) * 90))
             if (this.oponent.life <= 0) {
                 this.oponent.life = 0
             }
         },
 
         attackCrunch() {
-            this.oponent.life -= 130
+            this.oponent.life -= Math.floor(((this.pokemon.attack / this.oponent.defense) * 110))
             if (this.oponent.life <= 0) {
                 this.oponent.life = 0
             }
         },
 
         attackBulkUp() {
-            this.oponent.life -= 111
-            if (this.oponent.life <= 0) {
-                this.oponent.life = 0
-            }
+            this.pokemon.attack *= 1.15
+            alert(this.pokemon.attack)
+        },
+
+        // Oponent ataques --------------------------------------------------------------
+        attackRest() {
+
+        },
+
+        attacksleepTalk() {
+
+        },
+
+        attackShadowBall() {
+
+        },
+
+        attackDragonClaw() {
+
         },
     }
 }).mount('#app')
