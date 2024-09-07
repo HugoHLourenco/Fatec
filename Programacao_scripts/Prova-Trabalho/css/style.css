@@ -34,6 +34,7 @@ body {
     position: absolute;
     top: 0;
     height: 45%;
+    
 }
 
 .oponent-life-back {
@@ -190,13 +191,69 @@ button:active {
     box-shadow: #050909 0px -2px;
 }
 
+.buttons {
+    /* background-color: #fff; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* gap: 8px; */
+    width: 50%;
+    position: absolute;
+    left: 2%;
+    top: 6%;
+    height: 87%;
+}
+
+.btnAct {
+    font-weight: 600;
+    font-size: 30px;
+}
+
 /* OutPut ---------------------------------------------------------------------------------- */
 
 .output {
     background-color: #232c3a;
-    width: 66%;
-    height: 31%;
+    width: 64%;
+    height: 29%;
     position: absolute;
-    bottom: 1%;
-    left: 1%;
+    bottom: 2%;
+    left: 2%;
+    border-radius: 10px;
+    box-shadow: #070908 5px 5px 20px 10px;
+}
+
+/* Bag -------------------------------------------------------------------------------------- */
+.bag {
+    background-color: #232c3a;
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    box-shadow: #070908 5px 5px 20px 10px;
+    border-radius: 10px;
+}
+
+.subBag {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    width: 90%;
+    height: 80%;
+    background-color: #0f3050;
+    border-radius: 10px;
+}
+
+.textBag{
+    position: absolute;
+    left: 8%;
+    top: -5%;
+    font-size: 50px;
+    color: aliceblue;
+}
+
+.backBag {
+    position: absolute;
+    left: 0;
+    width: 10%;
+    height: 15%;
 }

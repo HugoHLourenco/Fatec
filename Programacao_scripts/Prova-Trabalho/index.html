@@ -31,16 +31,28 @@
             </div>
 
             <div class="actions">
-                <button @click="fight()">FIGHT</button>
-                <button @click="">BAG</button>
-                <button @click="">POKEMON</button>
-                <button @click="">RUN</button>
+                <button @click="fight()" :disabled="bagStatus">FIGHT</button>
+                <button @click="bag()" :disabled="bagStatus">BAG</button>
+                <button @click="numTemMais" :disabled="bagStatus">POKEMON</button>
+                <button @click="run()" :disabled="bagStatus">RUN</button>
             </div>
 
             <img src="/images/Rayquaza.gif" alt="" class="pokemon-sprite">
-            
-            <div class="output" v-if="fighting" >
 
+            <div class="output" v-if="fighting" >
+                <div class="buttons">
+                    <button class="btnAct" :disabled="bagStatus">Thunder</button>
+                    <button class="btnAct" :disabled="bagStatus">Twister</button>
+                    <button class="btnAct" :disabled="bagStatus">Over Heat</button>
+                    <button class="btnAct" :disabled="bagStatus">Bulk Up</button>
+                </div>
+            </div>
+
+            <div class="bag" v-if="bagStatus">
+                <h1 class="textBag">BAG</h1>
+                <div class="subBag">
+                    <button class="backBag" @click="bag()"><</button>
+                </div>
             </div>
         </div>
     </main>
