@@ -4,7 +4,7 @@ createApp({
     data() {
         return {
             pokemon: {life: 100, name:'DHUASHDUS', xp: 0},
-            oponent: {life: 243, name:'teste 313dsadas', maxLife: 300},
+            oponent: {life: 124, name:'Oponent Pokemon', maxLife: 331},
         }
     },
     methods: {

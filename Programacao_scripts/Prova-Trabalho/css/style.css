@@ -7,8 +7,14 @@ html, body {
     display: flex;
     /*justify-content: center;*/
     /*align-items: center;*/
-    background: linear-gradient(to bottom, rgb(152, 28, 28), #050909);
+    /* background: linear-gradient(to bottom, rgb(152, 28, 28), #050909); */
     font-family: Oxanium;
+}
+
+.battleGround {
+    height: 100%;
+    width: 100%;
+    position: absolute;
 }
 
 #app {
@@ -19,8 +25,6 @@ html, body {
 
 /* Área do oponent ---------------------------------------------------------------------*/
 .div-oponent {
-    background-color: #fff;
-    border: 2px solid #333;
     margin: 2px;
     padding: 5px;
     border-radius: 5px;
@@ -38,7 +42,7 @@ html, body {
     border-radius: 10px;
     border: black solid 2px;
     display: flex;
-    max-width: 99%;
+    width: 100%;
     margin-bottom: 5px;
 }
 
@@ -47,9 +51,9 @@ html, body {
     background-color: #888;
     position: absolute;
     top: 12.5%;
-    right: 1%;
-    font-weight: 600;
-    font-size: 20px;
+    right: 0.5%;
+    font-weight: 700;
+    font-size: 23px;
     border-radius: 10px;
     justify-content: center;
     align-items: center;
@@ -57,9 +61,12 @@ html, body {
 }
 
 .oponent-name {
+    background-color: #999;
     position: absolute;
     top: 6.5%;
     font-weight: 700;
+    border-radius: 5px;
+    border: #050909 solid 1px;
 }
 
 .oponent-sprite {
@@ -68,7 +75,7 @@ html, body {
     background-color: #555;
     border-radius: 8px;
     position: absolute;
-    top: 23%;
+    top: 25%;
 }
 
 /* Área do pokemon -------------------------------------------------------------------- */
