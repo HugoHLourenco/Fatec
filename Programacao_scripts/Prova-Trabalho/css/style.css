@@ -235,25 +235,29 @@ button:active {
 
 .subBag {
     position: absolute;
-    top: 10%;
-    left: 5%;
-    width: 90%;
+    top: 15%;
+    left: 10%;
+    width: 80%;
     height: 80%;
     background-color: #0f3050;
     border-radius: 10px;
+    font-size: 40px;
+    text-align: center;
+    box-shadow: #070908 5px 5px 20px 5px;
 }
 
 .textBag{
     position: absolute;
-    left: 8%;
-    top: -5%;
+    left: 15%;
+    top: -3%;
     font-size: 50px;
     color: aliceblue;
 }
 
 .backBag {
     position: absolute;
-    left: 0;
+    left: 1%;
+    top: 2%;
     width: 10%;
-    height: 15%;
+    height: 10%;
 }
