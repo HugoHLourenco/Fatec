@@ -14,7 +14,7 @@
 
     <main>
         <div id="app">
-            
+
             <!-- Div do oponent -->
             <div class="div-oponent">
                 <h1 class="oponent-name">{{oponent.name}}</h1>
@@ -27,6 +27,7 @@
             <!-- Imagem do oponent -->
             <img src="/images/Giratina.gif" alt="" class="oponent-sprite">
 
+            <!-- Div do pokemon -->
             <div class="div-pokemon">
                 <h1 class="pokemon-name">{{pokemon.name}}</h1>
                 <div class="pokemon-life"> {{pokemon.life}} / {{pokemon.maxLife}} </div>
@@ -35,6 +36,7 @@
                 </div>
             </div>
 
+            <!-- Menu de ações -->
             <div class="actions">
                 <button @click="fight()" :disabled="bagStatus || battle === 10">FIGHT</button>
                 <button @click="bag()" :disabled="bagStatus || battle === 10">BAG</button>
@@ -42,8 +44,10 @@
                 <button @click="run()" :disabled="bagStatus || battle === 10">RUN</button>
             </div>
 
+            <!-- Imagem do pokemon -->
             <img src="/images/Rayquaza.gif" alt="" class="pokemon-sprite">
 
+            <!-- Ataques -->
             <div class="moves" v-if="fighting">
                 <div class="buttons">
                     <button class="btnAct" :disabled="bagStatus" @click="attackThunder()">Thunder</button>
@@ -53,6 +57,7 @@
                 </div>
             </div>
 
+            <!-- console -->
             <div class="console" v-if ="battle === 1">
                 {{pokemon.name}} used {{pokemon.move}}.
                 <button class="btnNext" @click="next()">></button>
@@ -63,6 +68,7 @@
                 <button class="btnNext" @click="next2()">></button>
             </div>
 
+            <!-- Vitória -->
             <div class="console" v-else-if="battle === 10">
                 {{oponent.name}} Fainted.
                 <div class="win">
@@ -71,7 +77,10 @@
                 </div>
             </div>
 
+            <!-- Derrota -->
 
+            
+            <!-- Div da Bag -->
             <div class="bag" v-if="bagStatus">
                 <h1 class="textBag">BAG</h1>
                 <button class="backBag" @click="bag()"><</button>
