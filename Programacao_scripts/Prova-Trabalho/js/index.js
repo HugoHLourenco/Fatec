@@ -29,6 +29,7 @@ createApp({
             battling: false,
             potion: true,
             battle: 0,
+            run: false,
         }
     },
     methods: {
