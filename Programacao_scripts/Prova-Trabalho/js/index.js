@@ -28,8 +28,7 @@ createApp({
             bagStatus: false,
             battling: false,
             potion: true,
-            battle: 0,
-            mensage: "",
+            battle: 10,
         }
     },
     methods: {
@@ -55,16 +54,25 @@ createApp({
             this.bagStatus = false
             this.potion = false
             this.pokemon.life = 351
+            this.battle += 1
+            this.pokemon.move = "potion"
         },
 
         next() {
             this.battle += 1
             this.attackShadowBall()
-            if (this.battle >= 3) {
+            if (this.battle === 4) {
                 this.battle = 0
             }
         },
 
+        next2() {
+            this.battle = 0
+        },
+
+        btnRestart() {
+            window.location.reload();
+        },
 
         // Pokemon Ataques -------------------------------------------------------------
         attackThunder() {
@@ -90,12 +98,13 @@ createApp({
             if (this.oponent.life <= 0) {
                 this.oponent.life = 0
             }
-            this.battle += 1
+            this.battle +=1
             this.pokemon.move = "Crunch"
         },
 
         attackBulkUp() {
             this.pokemon.attack *= 1.15
+            this.pokemon.defense *= 1.15
             this.battle += 1
             this.pokemon.move = "Bulk Up"
         },
@@ -120,7 +129,7 @@ createApp({
         },
 
         attackShadowBall() {
-            this.pokemon.life -= Math.floor(((this.oponent.attack / this.pokemon.defense) * 110))
+            this.pokemon.life -= Math.floor(((this.oponent.attack / this.pokemon.defense) * 80))
             if (this.pokemon.life <= 0) {
                 this.pokemon.life = 0
             }

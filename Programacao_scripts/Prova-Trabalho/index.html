@@ -9,10 +9,13 @@
 </head>
 
 <body>
+    <!-- Cenário -->
     <img src="/images/draw-a-pixel-pokemon-battle-background.gif" alt="" class="battleGround">
 
     <main>
         <div id="app">
+            
+            <!-- Div do oponent -->
             <div class="div-oponent">
                 <h1 class="oponent-name">{{oponent.name}}</h1>
                 <div class="oponent-life">{{oponent.life}} / {{oponent.maxLife}}</div>
@@ -20,6 +23,8 @@
                     <div class="oponent-life-bar"></div>
                 </div>
             </div>
+
+            <!-- Imagem do oponent -->
             <img src="/images/Giratina.gif" alt="" class="oponent-sprite">
 
             <div class="div-pokemon">
@@ -31,10 +36,10 @@
             </div>
 
             <div class="actions">
-                <button @click="fight()" :disabled="bagStatus">FIGHT</button>
-                <button @click="bag()" :disabled="bagStatus">BAG</button>
-                <button @click="numTemMais" :disabled="bagStatus">POKEMON</button>
-                <button @click="run()" :disabled="bagStatus">RUN</button>
+                <button @click="fight()" :disabled="bagStatus || battle === 10">FIGHT</button>
+                <button @click="bag()" :disabled="bagStatus || battle === 10">BAG</button>
+                <button @click="numTemMais" :disabled="bagStatus || battle === 10">POKEMON</button>
+                <button @click="run()" :disabled="bagStatus || battle === 10">RUN</button>
             </div>
 
             <img src="/images/Rayquaza.gif" alt="" class="pokemon-sprite">
@@ -49,14 +54,23 @@
             </div>
 
             <div class="console" v-if ="battle === 1">
-                {{pokemon.name}} usou {{pokemon.move}}.
+                {{pokemon.name}} used {{pokemon.move}}.
                 <button class="btnNext" @click="next()">></button>
             </div>
 
-            <div class="console" v-else-if="battle === 2">
-                {{oponent.name}} usou {{oponent.move}}.
-                <button class="btnNext" @click="next()">></button>
+            <div class="console" v-else-if="battle === 3">
+                {{oponent.name}} used {{oponent.move}}.
+                <button class="btnNext" @click="next2()">></button>
             </div>
+
+            <div class="console" v-else-if="battle === 10">
+                {{oponent.name}} Fainted.
+                <div class="win">
+                    <h1>You Won</h1>
+                    <button class="btnRestart" @click="btnRestart()">Restart</button>
+                </div>
+            </div>
+
 
             <div class="bag" v-if="bagStatus">
                 <h1 class="textBag">BAG</h1>
