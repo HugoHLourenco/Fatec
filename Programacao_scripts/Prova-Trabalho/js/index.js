@@ -11,6 +11,7 @@ createApp({
                 defense: 216,
                 speed: 226,
                 move: "",
+                percent: 100,
             },
 
             oponent: {
@@ -21,6 +22,7 @@ createApp({
                 defense: 236,
                 speed: 216,
                 move: "",
+                percent: 100,
             },
 
             // Variáveis -------------------------------------------------------------
@@ -138,6 +140,7 @@ createApp({
                 this.thunder.pp -= 1
 
                 this.oponent.life -= Math.floor(((this.pokemon.attack / this.oponent.defense) * 50))
+                this.oponent.percent = ((this.oponent.life/this.oponent.maxLife)*100)
 
                 if (this.oponent.life <= 0) {
                     this.oponent.life = 0

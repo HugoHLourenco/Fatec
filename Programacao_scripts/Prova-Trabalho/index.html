@@ -24,7 +24,7 @@
                 <h1 class="oponent-name">{{oponent.name}}</h1>
                 <div class="oponent-life">{{oponent.life}} / {{oponent.maxLife}}</div>
                 <div class="oponent-life-back">
-                    <div class="oponent-life-bar"></div>
+                    <div class="oponent-life-bar" :style="{width: oponent.percent + '%'}"></div>
                 </div>
             </div>
 
