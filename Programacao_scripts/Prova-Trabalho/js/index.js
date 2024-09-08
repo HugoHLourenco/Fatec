@@ -28,7 +28,7 @@ createApp({
             bagStatus: false,
             battling: false,
             potion: true,
-            battle: 10,
+            battle: 0,
         }
     },
     methods: {
@@ -59,15 +59,23 @@ createApp({
         },
 
         next() {
-            this.battle += 1
-            this.attackShadowBall()
-            if (this.battle === 4) {
-                this.battle = 0
+            if (this.oponent.life === 0) {
+                this.battle = 10
+            } else {
+                this.battle += 1
+                this.attackShadowBall()
+                if (this.battle === 4) {
+                    this.battle = 0
+                }
             }
         },
 
         next2() {
-            this.battle = 0
+            if (this.pokemon.life === 0) {
+                this.battle = 9
+            } else {
+                this.battle = 0
+            }
         },
 
         btnRestart() {
