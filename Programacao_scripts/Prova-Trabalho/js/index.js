@@ -23,18 +23,17 @@ createApp({
                 move: "",
             },
 
-            calms: 3,
-            fighting: false,
-            bagStatus: false,
-            battling: false,
-            potion: true,
-            battle: 0,
-            runn: false,
+            calms: 3, //Contador do Calm Mind
+            fighting: false, // Verficador se "fight" está ativo
+            bagStatus: false, // Verficador se "bag" está ativa
+            battling: false, // Verficador se estão batalhando
+            potion: true, // Contador da potion
+            battle: 0, // Contador de turno de batalha
+            runn: false, // Verificador de fuga
         }
     },
     methods: {
-        // Botões de ações ----------------------------------------------------------------
-        
+        // Botões de ações --------------------------------------------------------       
         fight(fighting) {
             this.fighting = !this.fighting
         },
@@ -45,7 +44,7 @@ createApp({
 
         run() {
             this.runn = true
-            // window.location.reload();
+            this.battle = 8
         },
 
         numTemMais() {
@@ -83,7 +82,6 @@ createApp({
         btnRestart() {
             window.location.reload();
         },
-
 
         // Pokemon Ataques -------------------------------------------------------------
         attackThunder() {
@@ -125,7 +123,6 @@ createApp({
         },
 
         // Oponent ataques --------------------------------------------------------------
-
         ia() {
             if (this.oponent.life <= (this.oponent.maxLife * 0.3)) {
                 this.attackRecover()
@@ -176,6 +173,5 @@ createApp({
             this.battle += 1
             this.oponent.move = "Dragon Claw"
         },
-
     }
 }).mount('#app')

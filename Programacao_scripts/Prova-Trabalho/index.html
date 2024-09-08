@@ -43,10 +43,10 @@
 
             <!-- Menu de ações -->
             <div class="actions">
-                <button @click="fight()" :disabled="bagStatus || battle === 10">FIGHT</button>
-                <button @click="bag()" :disabled="bagStatus || battle === 10">BAG</button>
-                <button @click="numTemMais" :disabled="bagStatus || battle === 10">POKEMON</button>
-                <button @click="run()" :disabled="bagStatus || battle === 10">RUN</button>
+                <button @click="fight()" :disabled="bagStatus || battle > 0 ">FIGHT</button>
+                <button @click="bag()" :disabled="bagStatus || battle > 0">BAG</button>
+                <button @click="numTemMais" :disabled="bagStatus || battle > 0">POKEMON</button>
+                <button @click="run()" :disabled="bagStatus || battle > 0">RUN</button>
             </div>
 
             <!-- Imagem do pokemon -->
