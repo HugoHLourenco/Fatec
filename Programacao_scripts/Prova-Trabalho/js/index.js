@@ -142,7 +142,6 @@ createApp({
             } else {
                 this.thunder.pp -= 1
 
-                
                 this.oponent.life -= Math.floor(((this.pokemon.attack / this.oponent.defense) * 50))
                 this.oponent.percent = ((this.oponent.life/this.oponent.maxLife)*100)
 
