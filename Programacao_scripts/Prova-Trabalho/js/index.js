@@ -21,6 +21,7 @@ createApp({
                 defense: 236,
                 speed: 216,
                 move: "",
+                sleeping: false,
             },
 
 
@@ -63,7 +64,7 @@ createApp({
                 this.battle = 6
             } else {
                 this.battle += 1
-                this.attackShadowBall()
+                this.ia()
                 if (this.battle === 4) {
                     this.battle = 0
                 }
@@ -119,17 +120,19 @@ createApp({
 
         // Oponent ataques --------------------------------------------------------------
 
-        ia(battle) {
-            if (this.battle === 3) {
-                if (this.oponent.life <= this.oponent.maxLife * 0.9) {
-                    this.attackRest()
-                }
+        ia() {
+            if (this.oponent.life <= (this.oponent.maxLife * 0.3)) {
+                this.attackRest()
+            } else {
+                this.attackShadowBall()
             }
         },
 
         attackRest() {
             this.oponent.life = 441
+            this.battle += 1
             this.oponent.move = "Rest"
+            this.oponent.sleeping = true
         },
 
         attacksleepTalk() {

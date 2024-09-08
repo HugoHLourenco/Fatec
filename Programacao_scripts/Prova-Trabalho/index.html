@@ -25,7 +25,7 @@
             </div>
 
             <!-- Imagem do oponent -->
-            <img src="/images/Giratina.gif" alt="" class="oponent-sprite">
+            <img src="/images/Giratina.gif" alt="" class="oponent-sprite" v-if="oponent.life > 0">
 
             <!-- Div do pokemon -->
             <div class="div-pokemon">
@@ -45,7 +45,7 @@
             </div>
 
             <!-- Imagem do pokemon -->
-            <img src="/images/Rayquaza.gif" alt="" class="pokemon-sprite">
+            <img src="/images/Rayquaza.gif" alt="" class="pokemon-sprite" v-if="pokemon.life > 0">
 
             <!-- Ataques -->
             <div class="moves" v-if="fighting">
