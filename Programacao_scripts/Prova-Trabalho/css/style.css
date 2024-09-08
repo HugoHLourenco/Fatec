@@ -208,9 +208,16 @@ button:active {
     font-size: 30px;
 }
 
+.btnNext {
+    position: absolute;
+    right: 1%;
+    bottom: 5%;
+    width: 10%;
+}
+
 /* OutPut ---------------------------------------------------------------------------------- */
 
-.output {
+.moves {
     background-color: #232c3a;
     width: 64%;
     height: 29%;
@@ -219,6 +226,21 @@ button:active {
     left: 2%;
     border-radius: 10px;
     box-shadow: #070908 5px 5px 20px 10px;
+}
+
+.console {
+    background-color: #232c3a;
+    width: 64%;
+    height: 29%;
+    position: absolute;
+    bottom: 2%;
+    left: 2%;
+    border-radius: 10px;
+    box-shadow: #070908 5px 5px 20px 10px;
+    font-weight: 700;
+    font-size: 40px;
+    justify-content: center;
+    align-content: center;
 }
 
 /* Bag -------------------------------------------------------------------------------------- */

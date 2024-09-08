@@ -39,13 +39,23 @@
 
             <img src="/images/Rayquaza.gif" alt="" class="pokemon-sprite">
 
-            <div class="output" v-if="fighting">
+            <div class="moves" v-if="fighting">
                 <div class="buttons">
                     <button class="btnAct" :disabled="bagStatus" @click="attackThunder()">Thunder</button>
                     <button class="btnAct" :disabled="bagStatus" @click="attackTwister()">Twister</button>
                     <button class="btnAct" :disabled="bagStatus" @click="attackCrunch()">Crunch</button>
                     <button class="btnAct" :disabled="bagStatus" @click="attackBulkUp()">Bulk Up</button>
                 </div>
+            </div>
+
+            <div class="console" v-if ="battle === 1">
+                {{pokemon.name}} usou {{pokemon.move}}.
+                <button class="btnNext" @click="next()">></button>
+            </div>
+
+            <div class="console" v-else-if="battle === 2">
+                {{oponent.name}} usou {{oponent.move}}.
+                <button class="btnNext" @click="next()">></button>
             </div>
 
             <div class="bag" v-if="bagStatus">
