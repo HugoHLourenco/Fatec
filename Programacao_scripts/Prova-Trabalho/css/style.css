@@ -263,9 +263,21 @@ button:active {
     border-radius: 10px;
     box-shadow: #070908 5px 5px 20px 10px;
 }
-.lose{
-   
-} 
+
+.lose {
+    background-color: #232c3a;
+    position: fixed;
+    left: 30%;
+    top: 25%;
+    width: 40%;
+    height: 40%;
+    color:#5e2210;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: #070908 5px 5px 20px 10px;
+}
 
 
 /* Bag -------------------------------------------------------------------------------------- */

@@ -95,7 +95,7 @@
             </div>
 
             <!-- Vitória -->
-            <div class="console" v-else-if="battle === 10">
+            <div class="console" v-else-if="battle === 6">
                 {{oponent.name}} Fainted.
                 <div class="win">
                     <h1>You Won</h1>
@@ -104,7 +104,13 @@
             </div>
 
             <!-- Derrota -->
-            
+            <div class="console" v-else-if="battle === 7">
+                {{pokemon.name}} Fainted.
+                <div class="lose">
+                    <h1>You Lose</h1>
+                    <button class="btnRestart" @click="btnRestart()">Restart</button>
+                </div>
+            </div>
 
             
         </div>

@@ -60,7 +60,7 @@ createApp({
 
         next() {
             if (this.oponent.life === 0) {
-                this.battle = 10
+                this.battle = 6
             } else {
                 this.battle += 1
                 this.attackShadowBall()
@@ -72,7 +72,7 @@ createApp({
 
         next2() {
             if (this.pokemon.life === 0) {
-                this.battle = 9
+                this.battle = 7
             } else {
                 this.battle = 0
             }
