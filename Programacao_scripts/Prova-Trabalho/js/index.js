@@ -126,6 +126,10 @@ createApp({
             }
         },
 
+        clearDiv() {
+            this.moveStats = ""
+        },
+
         // Pokemon Ataques -------------------------------------------------------------
         attackThunder() {
             if(this.thunder.pp === 0) {
@@ -142,32 +146,48 @@ createApp({
         },
 
         attackTwister() {
-            this.oponent.life -= Math.floor(((this.pokemon.attack / this.oponent.defense) * 90))
-            if (this.oponent.life <= 0) {
-                this.oponent.life = 0
+            if(this.twister.pp === 0) {
+
+            } else {
+                this.twister.pp -= 1
+                this.oponent.life -= Math.floor(((this.pokemon.attack / this.oponent.defense) * 100))
+                if (this.oponent.life <= 0) {
+                    this.oponent.life = 0
+                }
+                this.battle += 1
+                this.pokemon.move = "Twister"
             }
-            this.battle += 1
-            this.pokemon.move = "Twister"
         },
 
         attackCrunch() {
-            this.oponent.life -= Math.floor(((this.pokemon.attack / this.oponent.defense) * 110))
-            if (this.oponent.life <= 0) {
-                this.oponent.life = 0
+            if(this.crunch.pp === 0) {
+
+            } else {
+                this.crunch.pp -= 1
+                this.oponent.life -= Math.floor(((this.pokemon.attack / this.oponent.defense) * 110))
+                if (this.oponent.life <= 0) {
+                    this.oponent.life = 0
+                }
+                var prob = Math.floor(Math.random() * 5)
+                if (prob === 5) {
+                    this.oponent.defense /= 1.2
+                }
+                this.battle += 1
+                this.pokemon.move = "Crunch"
             }
-            var prob = Math.floor(Math.random() * 5)
-            if (prob === 5) {
-                this.oponent.defense /= 1.2
-            }
-            this.battle += 1
-            this.pokemon.move = "Crunch"
+
         },
 
         attackBulkUp() {
-            this.pokemon.attack *= 1.2
-            this.pokemon.defense *= 1.2
-            this.battle += 1
-            this.pokemon.move = "Bulk Up"
+            if(this.bulkUp.pp === 0) {
+
+            } else {
+                this.bulkUp.pp -= 1
+                this.pokemon.attack *= 1.2
+                this.pokemon.defense *= 1.2
+                this.battle += 1
+                this.pokemon.move = "Bulk Up"
+            }
         },
 
         // Oponent ataques --------------------------------------------------------------
