@@ -54,9 +54,9 @@
             <!-- Ataques -->
             <div class="moves" v-if="fighting">
                 <div class="buttons">
-                    <button class="btnAct" :disabled="bagStatus" @click="attackThunder()" @mouseover="showPP('thunder')" @mouseleave="clearDiv()">Thunder</button>
-                    <button class="btnAct" :disabled="bagStatus" @click="attackTwister()" @mouseover="showPP('twister')" @mouseleave="clearDiv()">Twister</button>
-                    <button class="btnAct" :disabled="bagStatus" @click="attackCrunch()" @mouseover="showPP('crunch')" @mouseleave="clearDiv()">Crunch</button>
+                    <button class="btnAct" :disabled="bagStatus" @click="attack('thunder')" @mouseover="showPP('thunder')" @mouseleave="clearDiv()">Thunder</button>
+                    <button class="btnAct" :disabled="bagStatus" @click="attack('twister')" @mouseover="showPP('twister')" @mouseleave="clearDiv()">Twister</button>
+                    <button class="btnAct" :disabled="bagStatus" @click="attack('crunch')" @mouseover="showPP('crunch')" @mouseleave="clearDiv()">Crunch</button>
                     <button class="btnAct" :disabled="bagStatus" @click="attackBulkUp()" @mouseover="showPP('bulkUp')" @mouseleave="clearDiv()">Bulk Up</button>
                 </div>
 
