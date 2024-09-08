@@ -106,6 +106,10 @@ createApp({
             if (this.oponent.life <= 0) {
                 this.oponent.life = 0
             }
+            var prob =  Math.floor(Math.random() * 5)
+            if (prob === 5) {
+                this.oponent.defense /= 1.2 
+            }
             this.battle += 1
             this.pokemon.move = "Crunch"
         },

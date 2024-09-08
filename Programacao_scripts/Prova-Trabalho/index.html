@@ -12,6 +12,12 @@
     <!-- Cenário -->
     <img src="/images/draw-a-pixel-pokemon-battle-background.gif" alt="" class="battleGround">
 
+    <!-- Áudio -->
+     <audio id="meuAudio" src="/sounds/SPBD Cynthia.mp3"
+     loop autoplay></audio>
+
+     <audio src=""></audio>
+
     <main>
         <div id="app">
 
@@ -122,3 +128,10 @@
 </html>
 
 <script src="/js/index.js"></script>
+
+<script>
+    window.onload = function() {
+      var audio = document.getElementById("meuAudio")
+      audio.volume = 0.1
+    };
+  </script>
