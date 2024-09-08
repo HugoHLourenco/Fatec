@@ -29,7 +29,7 @@ createApp({
             battling: false,
             potion: true,
             battle: 0,
-            run: false,
+            runn: false,
         }
     },
     methods: {
@@ -44,8 +44,8 @@ createApp({
         },
 
         run() {
-            alert("Você fugiu...")
-            window.location.reload();
+            this.runn = true
+            // window.location.reload();
         },
 
         numTemMais() {

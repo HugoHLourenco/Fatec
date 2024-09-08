@@ -226,6 +226,22 @@ button:active {
     left: 33.5%;
 }
 
+/* .run {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    height: 80%;
+    width: 80%;
+    background-color: #232c3a;
+    box-shadow: #070908 5px 5px 20px 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 40px;
+} */
+
 /* OutPut ---------------------------------------------------------------------------------- */
 
 .moves {

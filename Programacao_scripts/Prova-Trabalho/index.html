@@ -50,7 +50,7 @@
             </div>
 
             <!-- Imagem do pokemon -->
-            <img src="/images/Rayquaza.gif" alt="" class="pokemon-sprite" v-if="pokemon.life > 0">
+            <img src="/images/Rayquaza.gif" alt="" class="pokemon-sprite" v-if="pokemon.life > 0 && !runn">
 
             <!-- Ataques -->
             <div class="moves" v-if="fighting">
@@ -117,6 +117,11 @@
                 </div>
             </div>
             
+            <!-- Run -->
+            <div class="console" v-if="runn">
+                Got away safety!
+                <button class="btnNext" @click="btnRestart()">></button>
+            </div>
         </div>
     </main>
 
