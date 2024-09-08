@@ -3,8 +3,22 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            pokemon: { life: 221, maxLife: 351, name: 'Rayquaza', attack: 336, defense: 216, speed: 226, },
-            oponent: { life: 441, maxLife: 441, name: 'Giratina', attack: 276, defense: 236, speed: 216,},
+            pokemon: { 
+                life: 351, 
+                maxLife: 351, 
+                name: 'Rayquaza', 
+                attack: 336, 
+                defense: 216, 
+                speed: 226, },
+
+            oponent: { life: 441, 
+                maxLife: 441, 
+                name: 'Giratina', 
+                attack: 276, 
+                defense: 236, 
+                speed: 216,},
+
+                
             fighting: false,
             bagStatus: false,
             battling: false,
@@ -12,6 +26,7 @@ createApp({
         }
     },
     methods: {
+        // Botões de ações ----------------------------------------------------------------
         fight(fighting){
             this.fighting = !this.fighting
         },
@@ -34,6 +49,8 @@ createApp({
             this.potion = false
             this.pokemon.life = 351
         },
+
+
 
         // Pokemon Ataques -------------------------------------------------------------
         attackThunder() {
@@ -59,7 +76,6 @@ createApp({
 
         attackBulkUp() {
             this.pokemon.attack *= 1.15
-            alert(this.pokemon.attack)
         },
 
         // Oponent ataques --------------------------------------------------------------
