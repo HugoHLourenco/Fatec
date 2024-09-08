@@ -36,7 +36,7 @@
                 <h1 class="pokemon-name">{{pokemon.name}}</h1>
                 <div class="pokemon-life"> {{pokemon.life}} / {{pokemon.maxLife}} </div>
                 <div class="pokemon-life-back">
-                    <div class="pokemon-life-bar"></div>
+                    <div class="pokemon-life-bar" :style="{width: pokemon.percent + '%'}"></div>
                 </div>
             </div>
 

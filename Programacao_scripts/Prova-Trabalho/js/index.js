@@ -83,12 +83,14 @@ createApp({
             this.bagStatus = false
             this.potion = false
             this.pokemon.life = 351
+            this.pokemon.percent = ((this.pokemon.life/this.pokemon.maxLife)*100)
             this.battle += 1
             this.pokemon.move = "potion"
         },
 
         next() {
             if (this.oponent.life === 0) {
+                this.oponent.percent = 0
                 this.battle = 6
             } else {
                 this.battle += 1
@@ -101,6 +103,7 @@ createApp({
 
         next2() {
             if (this.pokemon.life === 0) {
+                this.pokemon.percent = 0
                 this.battle = 7
             } else {
                 this.battle = 0
@@ -157,6 +160,7 @@ createApp({
             } else {
                 this.twister.pp -= 1
                 this.oponent.life -= Math.floor(((this.pokemon.attack / this.oponent.defense) * 100))
+                this.oponent.percent = ((this.oponent.life/this.oponent.maxLife)*100)
                 if (this.oponent.life <= 0) {
                     this.oponent.life = 0
                 }
@@ -171,6 +175,7 @@ createApp({
             } else {
                 this.crunch.pp -= 1
                 this.oponent.life -= Math.floor(((this.pokemon.attack / this.oponent.defense) * 110))
+                this.oponent.percent = ((this.oponent.life/this.oponent.maxLife)*100)
                 if (this.oponent.life <= 0) {
                     this.oponent.life = 0
                 }
@@ -218,6 +223,7 @@ createApp({
 
         attackRecover() {
             this.oponent.life += Math.floor(this.oponent.maxLife / 2)
+            this.oponent.percent = ((this.oponent.life/this.oponent.maxLife)*100)
             this.battle += 1
             this.oponent.move = "Recover"
         },
@@ -232,6 +238,7 @@ createApp({
 
         attackShadowBall() {
             this.pokemon.life -= Math.floor(((this.oponent.attack / this.pokemon.defense) * 80))
+            this.pokemon.percent = ((this.pokemon.life/this.pokemon.maxLife)*100)
             if (this.pokemon.life <= 0) {
                 this.pokemon.life = 0
             }
@@ -241,6 +248,7 @@ createApp({
 
         attackDragonClaw() {
             this.pokemon.life -= Math.floor(((this.oponent.attack / this.pokemon.defense) * 110))
+            this.pokemon.percent = ((this.pokemon.life/this.pokemon.maxLife)*100)
             if (this.pokemon.life <= 0) {
                 this.pokemon.life = 0
             }
