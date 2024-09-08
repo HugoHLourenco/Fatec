@@ -23,7 +23,7 @@ createApp({
                 move: "",
             },
 
-
+            calms: 3,
             fighting: false,
             bagStatus: false,
             battling: false,
@@ -111,8 +111,8 @@ createApp({
         },
 
         attackBulkUp() {
-            this.pokemon.attack *= 1.15
-            this.pokemon.defense *= 1.15
+            this.pokemon.attack *= 1.2
+            this.pokemon.defense *= 1.2
             this.battle += 1
             this.pokemon.move = "Bulk Up"
         },
@@ -123,7 +123,7 @@ createApp({
             if (this.oponent.life <= (this.oponent.maxLife * 0.3)) {
                 this.attackRecover()
             } else {
-                var num = Math.floor(Math.random() * 3)
+                var num = Math.floor(Math.random() * this.calms)
                 switch (num) {
                     case 0:
                         this.attackDragonClaw()
@@ -134,7 +134,7 @@ createApp({
                     case 2:
                         this.attackCalmMind()
                         break
-                }     
+                }
             }
         },
 
@@ -145,9 +145,10 @@ createApp({
         },
 
         attackCalmMind() {
-            this.oponent.attack += this.oponent.attack * 1.2
-            this.oponent.defense += this.oponent.defense * 1.2
+            this.oponent.attack *= 1.25
+            this.oponent.defense *= 1.25
             this.battle += 1
+            this.calms = 2
             this.oponent.move = "Calm mind"
         },
 
@@ -161,7 +162,7 @@ createApp({
         },
 
         attackDragonClaw() {
-            this.pokemon.life -= Math.floor(((this.oponent.attack / this.pokemon.defense) * 120))
+            this.pokemon.life -= Math.floor(((this.oponent.attack / this.pokemon.defense) * 110))
             if (this.pokemon.life <= 0) {
                 this.pokemon.life = 0
             }
