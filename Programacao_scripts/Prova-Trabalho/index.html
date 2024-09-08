@@ -13,8 +13,7 @@
     <img src="/images/draw-a-pixel-pokemon-battle-background.gif" alt="" class="battleGround">
 
     <!-- Áudio -->
-     <audio id="meuAudio" src="/sounds/SPBD Cynthia.mp3"
-     loop autoplay></audio>
+     <audio id="meuAudio" src="/sounds/SPBD Cynthia.mp3" autoplay loop controls class="music"></audio>
 
      <audio src=""></audio>
 
@@ -117,7 +116,6 @@
                     <button class="btnRestart" @click="btnRestart()">Restart</button>
                 </div>
             </div>
-
             
         </div>
     </main>
@@ -134,4 +132,4 @@
       var audio = document.getElementById("meuAudio")
       audio.volume = 0.1
     };
-  </script>
+</script>

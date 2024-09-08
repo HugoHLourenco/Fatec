@@ -33,6 +33,7 @@ createApp({
     },
     methods: {
         // Botões de ações ----------------------------------------------------------------
+        
         fight(fighting) {
             this.fighting = !this.fighting
         },
@@ -81,6 +82,7 @@ createApp({
         btnRestart() {
             window.location.reload();
         },
+
 
         // Pokemon Ataques -------------------------------------------------------------
         attackThunder() {
