@@ -14,7 +14,7 @@
     <img src="/images/draw-a-pixel-pokemon-battle-background.gif" alt="" class="battleGround">
 
     <!-- Áudio -->
-     <audio id="meuAudio" src="/sounds/SPBD Cynthia.mp3" autoplay loop controls class="music"></audio>
+     <audio id="meuAudio" src="/sounds/SPBD Cynthia.mp3" autoplay loop class="music"></audio>
 
     <main>
         <div id="app">
@@ -105,7 +105,7 @@
 
             <!-- Vitória -->
             <div class="console" v-else-if="battle === 6">
-                {{oponent.name}} Fainted.
+                {{oponent.name}} fainted.
                 <div class="win">
                     <h1>You Won</h1>
                     <button class="btnRestart" @click="btnRestart()">Restart</button>
@@ -114,7 +114,7 @@
 
             <!-- Derrota -->
             <div class="console" v-else-if="battle === 7">
-                {{pokemon.name}} Fainted.
+                {{pokemon.name}} fainted.
                 <div class="lose">
                     <h1>You Lose</h1>
                     <button class="btnRestart" @click="btnRestart()">Restart</button>
@@ -136,6 +136,7 @@
 
 <script src="/js/index.js"></script>
 
+<!-- Método que abaixa o volume -->
 <script>
     window.onload = function() {
       var audio = document.getElementById("meuAudio")

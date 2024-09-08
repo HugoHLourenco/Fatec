@@ -84,7 +84,6 @@ body {
 
 .oponent-sprite {
     height: 55%;
-    /* background-color: #555; */
     border-radius: 8px;
     position: absolute;
     top: 1%;
@@ -93,7 +92,6 @@ body {
 
 /* Área do pokemon -------------------------------------------------------------------- */
 .div-pokemon {
-    /* background-color: #fff; */
     width: 31%;
     position: absolute;
     bottom: 19%;
@@ -189,10 +187,9 @@ button:active {
 }
 
 .buttons {
-    /* background-color: #fff; */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    /* gap: 8px; */
+    gap: 8px;
     width: 50%;
     position: absolute;
     left: 2%;
@@ -248,6 +245,7 @@ button:active {
     font-size: 40px;
     justify-content: center;
     align-content: center;
+    color: aliceblue;
 }
 
 .win {
