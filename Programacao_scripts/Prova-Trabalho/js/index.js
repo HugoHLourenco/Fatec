@@ -11,7 +11,7 @@ createApp({
                 defense: 216,
                 speed: 226,
                 move: "",
-                percent: 100,
+                percent: 99,
             },
 
             oponent: {
@@ -22,7 +22,7 @@ createApp({
                 defense: 236,
                 speed: 216,
                 move: "",
-                percent: 100,
+                percent: 98,
             },
 
             // Variáveis -------------------------------------------------------------
@@ -83,7 +83,7 @@ createApp({
             this.bagStatus = false
             this.potion = false
             this.pokemon.life = 351
-            this.pokemon.percent = ((this.pokemon.life/this.pokemon.maxLife)*100)
+            this.pokemon.percent = 99
             this.battle += 1
             this.pokemon.move = "potion"
         },
