@@ -278,6 +278,20 @@ button:active {
     box-shadow: #070908 5px 5px 20px 10px;
 }
 
+.attackStats {
+    width: 45%;
+    height: 85%;
+    position: absolute;
+    right: 1%;
+    top: 7%;
+    background-color: #fff;
+    border-radius: 10px;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Bag -------------------------------------------------------------------------------------- */
 .bag {
     background-color: #232c3a;

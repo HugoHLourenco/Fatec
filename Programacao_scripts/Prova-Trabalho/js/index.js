@@ -23,6 +23,7 @@ createApp({
                 move: "",
             },
 
+            // Variáveis -------------------------------------------------------------
             calms: 3, //Contador do Calm Mind
             fighting: false, // Verficador se "fight" está ativo
             bagStatus: false, // Verficador se "bag" está ativa
@@ -30,6 +31,31 @@ createApp({
             potion: true, // Contador da potion
             battle: 0, // Contador de turno de batalha
             runn: false, // Verificador de fuga
+            moveStats: {
+                pp: null,
+                type: ""
+            },
+
+            // PP ----------------------------------------------------------------------
+            thunder: {
+                pp: 10,
+                type: "Eletric"
+            },
+
+            bulkUp: {
+                pp: 20,
+                type: "Fighting"
+            },
+
+            crunch: {
+                pp: 15,
+                type: "Dark"
+            },
+
+            twister: {
+                pp: 20,
+                type: "Dragon"
+            },
         }
     },
     methods: {
@@ -83,14 +109,36 @@ createApp({
             window.location.reload();
         },
 
+        showPP(name) {
+            switch (name) {
+                case 'thunder':
+                    this.moveStats = this.thunder
+                    break
+                case 'twister':
+                    this.moveStats = this.twister
+                    break
+                case 'bulkUp':
+                    this.moveStats = this.bulkUp
+                    break
+                case 'crunch':
+                    this.moveStats = this.crunch
+                    break
+            }
+        },
+
         // Pokemon Ataques -------------------------------------------------------------
         attackThunder() {
-            this.oponent.life -= Math.floor(((this.pokemon.attack / this.oponent.defense) * 50))
-            if (this.oponent.life <= 0) {
-                this.oponent.life = 0
+            if(this.thunder.pp === 0) {
+
+            } else {
+                this.thunder.pp -= 1
+                this.oponent.life -= Math.floor(((this.pokemon.attack / this.oponent.defense) * 50))
+                if (this.oponent.life <= 0) {
+                    this.oponent.life = 0
+                }
+                this.battle += 1
+                this.pokemon.move = "Thunder"
             }
-            this.battle += 1
-            this.pokemon.move = "Thunder"
         },
 
         attackTwister() {
@@ -107,9 +155,9 @@ createApp({
             if (this.oponent.life <= 0) {
                 this.oponent.life = 0
             }
-            var prob =  Math.floor(Math.random() * 5)
+            var prob = Math.floor(Math.random() * 5)
             if (prob === 5) {
-                this.oponent.defense /= 1.2 
+                this.oponent.defense /= 1.2
             }
             this.battle += 1
             this.pokemon.move = "Crunch"
