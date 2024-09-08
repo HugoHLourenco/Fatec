@@ -1,14 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap'); 
 
 html,
 body {
     height: 100%;
     margin: 0;
     display: flex;
-    /*justify-content: center;*/
-    /*align-items: center;*/
-    /* background: linear-gradient(to bottom, rgb(152, 28, 28), #050909); */
     font-family: Oxanium;
 }
 
@@ -158,8 +154,7 @@ body {
     height: 85%;
 }
 
-
-/*  Botões ----------------------------------------------------------------------------- */
+/* Botões ----------------------------------------------------------------------------- */
 .actions {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -226,24 +221,7 @@ button:active {
     left: 33.5%;
 }
 
-/* .run {
-    position: absolute;
-    top: 10%;
-    left: 10%;
-    height: 80%;
-    width: 80%;
-    background-color: #232c3a;
-    box-shadow: #070908 5px 5px 20px 20px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 700;
-    font-size: 40px;
-} */
-
-/* OutPut ---------------------------------------------------------------------------------- */
-
+/* OutPut / console ------------------------------------------------------------------ */
 .moves {
     background-color: #232c3a;
     width: 64%;
@@ -299,7 +277,6 @@ button:active {
     border-radius: 10px;
     box-shadow: #070908 5px 5px 20px 10px;
 }
-
 
 /* Bag -------------------------------------------------------------------------------------- */
 .bag {
