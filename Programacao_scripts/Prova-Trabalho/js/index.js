@@ -21,7 +21,6 @@ createApp({
                 defense: 236,
                 speed: 216,
                 move: "",
-                sleeping: false,
             },
 
 
@@ -107,7 +106,7 @@ createApp({
             if (this.oponent.life <= 0) {
                 this.oponent.life = 0
             }
-            this.battle +=1
+            this.battle += 1
             this.pokemon.move = "Crunch"
         },
 
@@ -122,21 +121,34 @@ createApp({
 
         ia() {
             if (this.oponent.life <= (this.oponent.maxLife * 0.3)) {
-                this.attackRest()
+                this.attackRecover()
             } else {
-                this.attackShadowBall()
+                var num = Math.floor(Math.random() * 3)
+                switch (num) {
+                    case 0:
+                        this.attackDragonClaw()
+                        break
+                    case 1:
+                        this.attackShadowBall()
+                        break
+                    case 2:
+                        this.attackCalmMind()
+                        break
+                }     
             }
         },
 
-        attackRest() {
-            this.oponent.life = 441
+        attackRecover() {
+            this.oponent.life += Math.floor(this.oponent.maxLife / 2)
             this.battle += 1
-            this.oponent.move = "Rest"
-            this.oponent.sleeping = true
+            this.oponent.move = "Recover"
         },
 
-        attacksleepTalk() {
-
+        attackCalmMind() {
+            this.oponent.attack += this.oponent.attack * 1.2
+            this.oponent.defense += this.oponent.defense * 1.2
+            this.battle += 1
+            this.oponent.move = "Calm mind"
         },
 
         attackShadowBall() {
@@ -149,7 +161,12 @@ createApp({
         },
 
         attackDragonClaw() {
-
+            this.pokemon.life -= Math.floor(((this.oponent.attack / this.pokemon.defense) * 120))
+            if (this.pokemon.life <= 0) {
+                this.pokemon.life = 0
+            }
+            this.battle += 1
+            this.oponent.move = "Dragon Claw"
         },
 
     }
