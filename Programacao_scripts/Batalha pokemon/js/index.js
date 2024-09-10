@@ -77,7 +77,7 @@ createApp({
         },
 
         numTemMais() {
-            alert("Você não tem outros pokémons!")
+            this.pokemonBar = !this.pokemonBar
         },
 
         usePotion() {

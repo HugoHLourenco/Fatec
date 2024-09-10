@@ -42,10 +42,10 @@
 
             <!-- Menu de ações -->
             <div class="actions">
-                <button @click="fight()" :disabled="bagStatus || battle > 0 ">FIGHT</button>
-                <button @click="bag()" :disabled="bagStatus || battle > 0">BAG</button>
+                <button @click="fight()" :disabled="bagStatus || battle > 0 || pokemonBar">FIGHT</button>
+                <button @click="bag()" :disabled="bagStatus || battle > 0 || pokemonBar">BAG</button>
                 <button @click="numTemMais" :disabled="bagStatus || battle > 0">POKEMON</button>
-                <button @click="run()" :disabled="bagStatus || battle > 0">RUN</button>
+                <button @click="run()" :disabled="bagStatus || battle > 0 || pokemonBar">RUN</button>
             </div>
 
             <!-- Imagem do pokemon -->
@@ -125,6 +125,12 @@
             <div class="console" v-if="runn">
                 Got away safety!
                 <button class="btnNext" @click="btnRestart()">></button>
+            </div>
+
+            <!-- Pokemons bar -->
+            <div class="console" v-if="pokemonBar">
+                You don't have other Pokemons
+                <button class="btnNext" @click="numTemMais()">></button>
             </div>
         </div>
     </main>
