@@ -76,7 +76,7 @@ createApp({
             this.battle = 8
         },
 
-        numTemMais() {
+        showPokemonBar() {
             this.pokemonBar = !this.pokemonBar
         },
 
