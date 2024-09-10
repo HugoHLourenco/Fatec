@@ -14,7 +14,7 @@
     <img src="/images/draw-a-pixel-pokemon-battle-background.gif" alt="" class="battleGround">
 
     <!-- Áudio -->
-     <audio id="meuAudio" src="/sounds/FRLG FinalRival.mp3" autoplay loop class="music"></audio>
+     <audio id="SoundTrack" src="/sounds/SPBD Cynthia.mp3" autoplay loop class="music"></audio>
 
     <main>
         <div id="app">
@@ -144,8 +144,8 @@
 
 <!-- Método que abaixa o volume -->
 <script>
-    window.onload = function() {
-      var audio = document.getElementById("meuAudio")
+    window.onload = () => {
+      var audio = document.getElementById("SoundTrack")
       audio.volume = 0.1
     };
 </script>

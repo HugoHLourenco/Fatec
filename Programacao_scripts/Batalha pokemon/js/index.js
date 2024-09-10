@@ -63,11 +63,11 @@ createApp({
     },
     methods: {
         // Botões de ações --------------------------------------------------------       
-        fight(fighting) {
+        fight() {
             this.fighting = !this.fighting
         },
 
-        bag(bagStatus) {
+        bag() {
             this.bagStatus = !this.bagStatus
         },
 
