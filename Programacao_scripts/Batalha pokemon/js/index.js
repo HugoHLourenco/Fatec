@@ -30,7 +30,7 @@ createApp({
             fighting: false, // Verficador se "fight" está ativo
             bagStatus: false, // Verficador se "bag" está ativa
             battling: false, // Verficador se estão batalhando
-            pokemonBar: false,
+            pokemonBar: false, // Verificador se a Pokemons Bar está ativa
             potion: true, // Contador da potion
             battle: 0, // Contador de turno de batalha
             runn: false, // Verificador de fuga
