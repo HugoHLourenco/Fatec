@@ -44,7 +44,7 @@
             <div class="actions">
                 <button @click="fight()" :disabled="bagStatus || battle > 0 || pokemonBar">FIGHT</button>
                 <button @click="bag()" :disabled="bagStatus || battle > 0 || pokemonBar">BAG</button>
-                <button @click="numTemMais" :disabled="bagStatus || battle > 0">POKEMON</button>
+                <button @click="showPokemonBar()" :disabled="bagStatus || battle > 0">POKEMON</button>
                 <button @click="run()" :disabled="bagStatus || battle > 0 || pokemonBar">RUN</button>
             </div>
 
