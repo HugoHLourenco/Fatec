@@ -59,7 +59,8 @@
                     <button class="btnAct" :disabled="bagStatus" @click="attackCrunch()" @mouseover="showPP('crunch')" @mouseleave="clearDiv()">Crunch</button>
                     <button class="btnAct" :disabled="bagStatus" @click="attackBulkUp()" @mouseover="showPP('bulkUp')" @mouseleave="clearDiv()">Bulk Up</button>
                 </div>
-
+            
+                <!-- Div de PP e Type -->
                 <div class="attackStats">
                     PP: {{moveStats.pp}} <br>
                     Type/ {{moveStats.type}}
