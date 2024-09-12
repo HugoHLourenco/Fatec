@@ -40,6 +40,9 @@
                 </div>
             </div>
 
+            <!-- Imagem do pokemon -->
+            <img src="/images/Rayquaza.gif" alt="" class="pokemon-sprite" v-if="pokemon.life > 0 && !runn">
+
             <!-- Menu de ações -->
             <div class="actions">
                 <button @click="fight()" :disabled="bagStatus || battle > 0 || pokemonBar">FIGHT</button>
@@ -47,9 +50,6 @@
                 <button @click="showPokemonBar()" :disabled="bagStatus || battle > 0">POKEMON</button>
                 <button @click="run()" :disabled="bagStatus || battle > 0 || pokemonBar">RUN</button>
             </div>
-
-            <!-- Imagem do pokemon -->
-            <img src="/images/Rayquaza.gif" alt="" class="pokemon-sprite" v-if="pokemon.life > 0 && !runn">
 
             <!-- Ataques -->
             <div class="moves" v-if="fighting">
