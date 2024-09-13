@@ -35,29 +35,49 @@ createApp({
             battle: 0, // Contador de turno de batalha
             runn: false, // Verificador de fuga
             moveStats: {
+                name: "",
                 pp: null,
-                type: ""
+                type: "",
+                db: 0,
+                modAtk: 1,
+                modDef: 1,
             },
 
             // PP ----------------------------------------------------------------------
             thunder: {
+                name: 'Thunder',
                 pp: 10,
-                type: "Eletric"
+                type: "Eletric",
+                db: 60,
+                modAtk: 1,
+                modDef: 1,
             },
 
             bulkUp: {
+                name: 'Bulk Up',
                 pp: 20,
-                type: "Fighting"
+                type: "Fighting",
+                db: 0,
+                modAtk: 1.2,
+                modDef: 1.2,
             },
 
             crunch: {
+                name: 'Crunch',
                 pp: 15,
-                type: "Dark"
+                type: "Dark",
+                db: 100,
+                modAtk: 1,
+                modDef: 1,
             },
 
             twister: {
+                name: 'Twister',
                 pp: 20,
-                type: "Dragon"
+                type: "Dragon",
+                db: 110,
+                modAtk: 1,
+                modDef: 1,
             },
         }
     },
@@ -137,69 +157,38 @@ createApp({
         },
 
         // Pokemon Ataques -------------------------------------------------------------
-        attackThunder() {
-            if(this.thunder.pp === 0) {
+        attack(name) {
+            switch (name) {
+                case 'thunder':
+                    this.moveStats = this.thunder
+                    break
+                case 'twister':
+                    this.moveStats = this.twister
+                    break
+                case 'crunch':
+                    this.moveStats = this.crunch
+                    break
+                case 'bulkUp':
+                    this.moveStats = this.bulkUp
+                    break
+            }
+
+            if (this.moveStats.pp === 0) {
 
             } else {
-                this.thunder.pp -= 1
+                this.moveStats.pp --
 
-                
-                this.oponent.life -= Math.floor(((this.pokemon.attack / this.oponent.defense) * 50))
-                this.oponent.percent = ((this.oponent.life/this.oponent.maxLife)*100)
+                this.oponent.life -= Math.floor(((this.pokemon.attack / this.oponent.defense) * this.moveStats.db))
+                this.oponent.percent = ((this.oponent.life / this.oponent.maxLife) * 100)
+                this.pokemon.attack *= this.moveStats.modAtk
+                this.pokemon.defense *= this.moveStats.modDef
 
-                if (this.oponent.life <= 0) {
+                if (this.oponent.life < 0) {
                     this.oponent.life = 0
                 }
 
-                this.battle += 1
-                this.pokemon.move = "Thunder"
-            }
-        },
-
-        attackTwister() {
-            if(this.twister.pp === 0) {
-
-            } else {
-                this.twister.pp -= 1
-                this.oponent.life -= Math.floor(((this.pokemon.attack / this.oponent.defense) * 100))
-                this.oponent.percent = ((this.oponent.life/this.oponent.maxLife)*100)
-                if (this.oponent.life <= 0) {
-                    this.oponent.life = 0
-                }
-                this.battle += 1
-                this.pokemon.move = "Twister"
-            }
-        },
-
-        attackCrunch() {
-            if(this.crunch.pp === 0) {
-
-            } else {
-                this.crunch.pp -= 1
-                this.oponent.life -= Math.floor(((this.pokemon.attack / this.oponent.defense) * 110))
-                this.oponent.percent = ((this.oponent.life/this.oponent.maxLife)*100)
-                if (this.oponent.life <= 0) {
-                    this.oponent.life = 0
-                }
-                var prob = Math.floor(Math.random() * 5)
-                if (prob === 5) {
-                    this.oponent.defense /= 1.2
-                }
-                this.battle += 1
-                this.pokemon.move = "Crunch"
-            }
-
-        },
-
-        attackBulkUp() {
-            if(this.bulkUp.pp === 0) {
-
-            } else {
-                this.bulkUp.pp -= 1
-                this.pokemon.attack *= 1.2
-                this.pokemon.defense *= 1.2
-                this.battle += 1
-                this.pokemon.move = "Bulk Up"
+                this.battle ++
+                this.pokemon.move = this.moveStats.name
             }
         },
 
@@ -225,7 +214,7 @@ createApp({
 
         attackRecover() {
             this.oponent.life += Math.floor(this.oponent.maxLife / 2)
-            this.oponent.percent = ((this.oponent.life/this.oponent.maxLife)*100)
+            this.oponent.percent = ((this.oponent.life / this.oponent.maxLife) * 100)
             this.battle += 1
             this.oponent.move = "Recover"
         },
@@ -240,7 +229,7 @@ createApp({
 
         attackShadowBall() {
             this.pokemon.life -= Math.floor(((this.oponent.attack / this.pokemon.defense) * 80))
-            this.pokemon.percent = ((this.pokemon.life/this.pokemon.maxLife)*100)
+            this.pokemon.percent = ((this.pokemon.life / this.pokemon.maxLife) * 100)
             if (this.pokemon.life <= 0) {
                 this.pokemon.life = 0
             }
@@ -250,7 +239,7 @@ createApp({
 
         attackDragonClaw() {
             this.pokemon.life -= Math.floor(((this.oponent.attack / this.pokemon.defense) * 110))
-            this.pokemon.percent = ((this.pokemon.life/this.pokemon.maxLife)*100)
+            this.pokemon.percent = ((this.pokemon.life / this.pokemon.maxLife) * 100)
             if (this.pokemon.life <= 0) {
                 this.pokemon.life = 0
             }
