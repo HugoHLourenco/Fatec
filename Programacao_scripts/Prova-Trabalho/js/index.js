@@ -145,10 +145,18 @@ createApp({
 
         // Pokemon Ataques -------------------------------------------------------------
         attack(name) {
-            this.moveStats.name = name.name
-            this.moveStats.pb = name.pb
-            this.moveStats.pp = name.pp
-            this.moveStats.type = name.type
+            switch(name) {
+                case 'thunder':
+                    this.moveStats = this.thunder
+                    break
+                case 'twister':
+                    this.moveStats = this.twister
+                    break
+                    case 'crunch':
+                        this.moveStats = this.crunch
+                        break
+            }
+           
 
 
 
