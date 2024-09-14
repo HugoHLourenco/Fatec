@@ -7,9 +7,6 @@ endereco varchar(40) null
 create table equipamento(
 equipamento_nome varchar(30) not null,
 tipo varchar(20) null,
-show create table <nome>; (mostra as tabelas mais detalhado)
-show tables; (mostra as tabelas)
-
 modelo varchar(30) null,
 fabricante varchar(30) null
 );
