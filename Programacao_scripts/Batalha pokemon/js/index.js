@@ -82,7 +82,9 @@ createApp({
         }
     },
     methods: {
-        // Botões de ações --------------------------------------------------------       
+    // Botões de ações --------------------------------------------------------   
+        
+        // Abre o menu Fight
         fight() {
             this.fighting = !this.fighting
         },
