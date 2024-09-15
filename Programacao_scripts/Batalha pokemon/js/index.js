@@ -172,8 +172,8 @@ createApp({
                 if (this.battle === 4) {
                     this.battle = 0
                 }
+                this.buttonSound()
             }
-            this.buttonSound()
         },
 
         // 2º Botão que avança e verifica jogo -----------------------------------------------------------------------
