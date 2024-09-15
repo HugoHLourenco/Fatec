@@ -82,88 +82,90 @@ createApp({
         }
     },
     methods: { 
-        // Abre o menu Fight ------------------------------------------------------------------------------
-        fight() {
-            this.fighting = !this.fighting
-        },
+        // Botões --------------------------------------------------------------------------------
+        
+            // Abre o menu Fight ------------------------------------------------------------------------------
+            fight() {
+                this.fighting = !this.fighting
+            },
 
-        // Abre a Bag -----------------------------------------------------------------------------------------
-        bag() {
-            this.bagStatus = !this.bagStatus
-        },
+            // Abre a Bag -----------------------------------------------------------------------------------------
+            bag() {
+                this.bagStatus = !this.bagStatus
+            },
 
-        // Foge da batalha ------------------------------------------------------------------------------------
-        run() {
-            this.runn = true
-            this.battle = 8
-        },
+            // Foge da batalha ------------------------------------------------------------------------------------
+            run() {
+                this.runn = true
+                this.battle = 8
+            },
 
-        // Abre o menu de Pokemons ------------------------------------------------------------------------------
-        showPokemonBar() {
-            this.pokemonBar = !this.pokemonBar
-        },
+            // Abre o menu de Pokemons ------------------------------------------------------------------------------
+            showPokemonBar() {
+                this.pokemonBar = !this.pokemonBar
+            },
 
-        // Método que usa a Potion ------------------------------------------------------------------------------
-        usePotion() {
-            this.bagStatus = false
-            this.potion = false
-            this.pokemon.life = 351
-            this.pokemon.percent = 99
-            this.battle += 1
-            this.pokemon.move = "potion"
-        },
-
-        // Botão que avança e verifica jogo -----------------------------------------------------------------------
-        next() {
-            if (this.oponent.life === 0) {
-                this.oponent.percent = 0
-                this.battle = 6
-            } else {
+            // Método que usa a Potion ------------------------------------------------------------------------------
+            usePotion() {
+                this.bagStatus = false
+                this.potion = false
+                this.pokemon.life = 351
+                this.pokemon.percent = 99
                 this.battle += 1
-                this.ia()
-                if (this.battle === 4) {
+                this.pokemon.move = "potion"
+            },
+
+            // Botão que avança e verifica jogo -----------------------------------------------------------------------
+            next() {
+                if (this.oponent.life === 0) {
+                    this.oponent.percent = 0
+                    this.battle = 6
+                } else {
+                    this.battle += 1
+                    this.ia()
+                    if (this.battle === 4) {
+                        this.battle = 0
+                    }
+                }
+            },
+
+            // 2º Botão que avança e verifica jogo -----------------------------------------------------------------------
+            next2() {
+                if (this.pokemon.life === 0) {
+                    this.pokemon.percent = 0
+                    this.battle = 7
+                } else {
                     this.battle = 0
                 }
-            }
-        },
+            },
 
-        // 2º Botão que avança e verifica jogo -----------------------------------------------------------------------
-        next2() {
-            if (this.pokemon.life === 0) {
-                this.pokemon.percent = 0
-                this.battle = 7
-            } else {
-                this.battle = 0
-            }
-        },
+            // Botão que recarrega á página ------------------------------------------------------------------------------
+            btnRestart() {
+                window.location.reload();
+            },
 
-        // Botão que recarrega á página ------------------------------------------------------------------------------
-        btnRestart() {
-            window.location.reload();
-        },
+            // Mostra a quantidade de PPs na HotBar ------------------------------------------------------------------------
+            showPP(name) {
+                switch (name) {
+                    case 'thunder':
+                        this.moveStats = this.thunder
+                        break
+                    case 'twister':
+                        this.moveStats = this.twister
+                        break
+                    case 'bulkUp':
+                        this.moveStats = this.bulkUp
+                        break
+                    case 'crunch':
+                        this.moveStats = this.crunch
+                        break
+                }
+            },
 
-        // Mostra a quantidade de PPs na HotBar ------------------------------------------------------------------------
-        showPP(name) {
-            switch (name) {
-                case 'thunder':
-                    this.moveStats = this.thunder
-                    break
-                case 'twister':
-                    this.moveStats = this.twister
-                    break
-                case 'bulkUp':
-                    this.moveStats = this.bulkUp
-                    break
-                case 'crunch':
-                    this.moveStats = this.crunch
-                    break
-            }
-        },
-
-        // Limpa os status da HotBar -----------------------------------------------------------------------------------
-        clearDiv() {
-            this.moveStats = ""
-        },
+            // Limpa os status da HotBar -----------------------------------------------------------------------------------
+            clearDiv() {
+                this.moveStats = ""
+            },
 
     // Pokemon Ataques -------------------------------------------------------------
         attack(name) {
