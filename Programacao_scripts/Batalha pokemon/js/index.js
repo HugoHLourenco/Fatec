@@ -120,25 +120,35 @@ createApp({
     methods: {
         // Botões --------------------------------------------------------------------------------
 
+        // Som do botão ------------------------------------------------------------------------------------
+        buttonSound() {
+            const som = new Audio('/sounds/notification.mp3')
+            som.play()
+        },
+
         // Abre o menu Fight ------------------------------------------------------------------------------
         fight() {
             this.fighting = !this.fighting
+            this.buttonSound()
         },
 
         // Abre a Bag -----------------------------------------------------------------------------------------
         bag() {
             this.bagStatus = !this.bagStatus
+            this.buttonSound()
         },
 
         // Foge da batalha ------------------------------------------------------------------------------------
         run() {
             this.runn = true
             this.battle = 8
+            this.buttonSound()
         },
 
         // Abre o menu de Pokemons ------------------------------------------------------------------------------
         showPokemonBar() {
             this.pokemonBar = !this.pokemonBar
+            this.buttonSound()
         },
 
         // Método que usa a Potion ------------------------------------------------------------------------------
@@ -149,6 +159,7 @@ createApp({
             this.pokemon.percent = 99
             this.battle += 1
             this.pokemon.move = "potion"
+            this.buttonSound()
         },
 
         // Botão que avança e verifica jogo -----------------------------------------------------------------------
@@ -162,6 +173,7 @@ createApp({
                     this.battle = 0
                 }
             }
+            this.buttonSound()
         },
 
         // 2º Botão que avança e verifica jogo -----------------------------------------------------------------------
@@ -171,10 +183,12 @@ createApp({
             } else {
                 this.battle = 0
             }
+            this.buttonSound()
         },
 
         // Botão que recarrega á página ------------------------------------------------------------------------------
         btnRestart() {
+            this.buttonSound()
             window.location.reload();
         },
 
