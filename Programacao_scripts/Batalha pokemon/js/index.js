@@ -81,93 +81,93 @@ createApp({
             },
         }
     },
-    methods: { 
+    methods: {
         // Botões --------------------------------------------------------------------------------
-        
-            // Abre o menu Fight ------------------------------------------------------------------------------
-            fight() {
-                this.fighting = !this.fighting
-            },
 
-            // Abre a Bag -----------------------------------------------------------------------------------------
-            bag() {
-                this.bagStatus = !this.bagStatus
-            },
+        // Abre o menu Fight ------------------------------------------------------------------------------
+        fight() {
+            this.fighting = !this.fighting
+        },
 
-            // Foge da batalha ------------------------------------------------------------------------------------
-            run() {
-                this.runn = true
-                this.battle = 8
-            },
+        // Abre a Bag -----------------------------------------------------------------------------------------
+        bag() {
+            this.bagStatus = !this.bagStatus
+        },
 
-            // Abre o menu de Pokemons ------------------------------------------------------------------------------
-            showPokemonBar() {
-                this.pokemonBar = !this.pokemonBar
-            },
+        // Foge da batalha ------------------------------------------------------------------------------------
+        run() {
+            this.runn = true
+            this.battle = 8
+        },
 
-            // Método que usa a Potion ------------------------------------------------------------------------------
-            usePotion() {
-                this.bagStatus = false
-                this.potion = false
-                this.pokemon.life = 351
-                this.pokemon.percent = 99
+        // Abre o menu de Pokemons ------------------------------------------------------------------------------
+        showPokemonBar() {
+            this.pokemonBar = !this.pokemonBar
+        },
+
+        // Método que usa a Potion ------------------------------------------------------------------------------
+        usePotion() {
+            this.bagStatus = false
+            this.potion = false
+            this.pokemon.life = 351
+            this.pokemon.percent = 99
+            this.battle += 1
+            this.pokemon.move = "potion"
+        },
+
+        // Botão que avança e verifica jogo -----------------------------------------------------------------------
+        next() {
+            if (this.oponent.life === 0) {
+                this.oponent.percent = 0
+                this.battle = 6
+            } else {
                 this.battle += 1
-                this.pokemon.move = "potion"
-            },
-
-            // Botão que avança e verifica jogo -----------------------------------------------------------------------
-            next() {
-                if (this.oponent.life === 0) {
-                    this.oponent.percent = 0
-                    this.battle = 6
-                } else {
-                    this.battle += 1
-                    this.ia()
-                    if (this.battle === 4) {
-                        this.battle = 0
-                    }
-                }
-            },
-
-            // 2º Botão que avança e verifica jogo -----------------------------------------------------------------------
-            next2() {
-                if (this.pokemon.life === 0) {
-                    this.pokemon.percent = 0
-                    this.battle = 7
-                } else {
+                this.ia()
+                if (this.battle === 4) {
                     this.battle = 0
                 }
-            },
+            }
+        },
 
-            // Botão que recarrega á página ------------------------------------------------------------------------------
-            btnRestart() {
-                window.location.reload();
-            },
+        // 2º Botão que avança e verifica jogo -----------------------------------------------------------------------
+        next2() {
+            if (this.pokemon.life === 0) {
+                this.pokemon.percent = 0
+                this.battle = 7
+            } else {
+                this.battle = 0
+            }
+        },
 
-            // Mostra a quantidade de PPs na HotBar ------------------------------------------------------------------------
-            showPP(name) {
-                switch (name) {
-                    case 'thunder':
-                        this.moveStats = this.thunder
-                        break
-                    case 'twister':
-                        this.moveStats = this.twister
-                        break
-                    case 'bulkUp':
-                        this.moveStats = this.bulkUp
-                        break
-                    case 'crunch':
-                        this.moveStats = this.crunch
-                        break
-                }
-            },
+        // Botão que recarrega á página ------------------------------------------------------------------------------
+        btnRestart() {
+            window.location.reload();
+        },
 
-            // Limpa os status da HotBar -----------------------------------------------------------------------------------
-            clearDiv() {
-                this.moveStats = ""
-            },
+        // Mostra a quantidade de PPs na HotBar ------------------------------------------------------------------------
+        showPP(name) {
+            switch (name) {
+                case 'thunder':
+                    this.moveStats = this.thunder
+                    break
+                case 'twister':
+                    this.moveStats = this.twister
+                    break
+                case 'bulkUp':
+                    this.moveStats = this.bulkUp
+                    break
+                case 'crunch':
+                    this.moveStats = this.crunch
+                    break
+            }
+        },
 
-    // Pokemon Ataques -------------------------------------------------------------
+        // Limpa os status da HotBar -----------------------------------------------------------------------------------
+        clearDiv() {
+            this.moveStats = ""
+        },
+
+        // Pokemon Ataques -------------------------------------------------------------
         attack(name) {
             switch (name) {
                 case 'thunder':
@@ -187,10 +187,9 @@ createApp({
             if (this.moveStats.pp === 0) {
 
             } else {
-                this.moveStats.pp --
+                this.moveStats.pp--
 
                 this.oponent.life -= Math.floor(((this.pokemon.attack / this.oponent.defense) * this.moveStats.db))
-                this.oponent.percent = ((this.oponent.life / this.oponent.maxLife) * 100)
                 this.pokemon.attack *= this.moveStats.modAtk
                 this.pokemon.defense *= this.moveStats.modDef
 
@@ -198,12 +197,13 @@ createApp({
                     this.oponent.life = 0
                 }
 
-                this.battle ++
+                this.battle++
                 this.pokemon.move = this.moveStats.name
+                this.calculaPercentOpo()
             }
         },
 
-    // Oponent ataques --------------------------------------------------------------
+        // Oponent ataques --------------------------------------------------------------
         ia() {
             if (this.oponent.life <= (this.oponent.maxLife * 0.3)) {
                 this.attackRecover()
@@ -225,9 +225,10 @@ createApp({
 
         attackRecover() {
             this.oponent.life += Math.floor(this.oponent.maxLife / 2)
-            this.oponent.percent = ((this.oponent.life / this.oponent.maxLife) * 100)
+            
             this.battle += 1
             this.oponent.move = "Recover"
+            this.calculaPercentOpo()
         },
 
         attackCalmMind() {
@@ -240,22 +241,54 @@ createApp({
 
         attackShadowBall() {
             this.pokemon.life -= Math.floor(((this.oponent.attack / this.pokemon.defense) * 80))
-            this.pokemon.percent = ((this.pokemon.life / this.pokemon.maxLife) * 100)
+            
             if (this.pokemon.life <= 0) {
                 this.pokemon.life = 0
             }
             this.battle += 1
             this.oponent.move = "Shadow Ball"
+            this.calculaPercentPoke()
         },
 
         attackDragonClaw() {
             this.pokemon.life -= Math.floor(((this.oponent.attack / this.pokemon.defense) * 110))
-            this.pokemon.percent = ((this.pokemon.life / this.pokemon.maxLife) * 100)
+            
             if (this.pokemon.life <= 0) {
                 this.pokemon.life = 0
             }
             this.battle += 1
             this.oponent.move = "Dragon Claw"
+            this.calculaPercentPoke()
+        },
+    },
+
+    computed: {
+        lifeBarColorPoke() {
+            if (this.pokemon.percent <= 10) {
+                return "#a1382a"
+            } else if (this.pokemon.percent > 10 && this.pokemon.percent <= 49) {
+                return "#e0d753"
+            } else if (this.pokemon.percent > 50) {
+                return "#44dc75"
+            }
+        },
+
+        lifeBarColorOpo() {
+            if (this.oponent.percent <= 10) {
+                return "#a1382a"
+            } else if (this.oponent.percent > 10 && this.oponent.percent <= 49) {
+                return "#e0d753"
+            } else if (this.oponent.percent > 50) {
+                return "#44dc75"
+            }
+        },
+
+        calculaPercentPoke() {
+            this.pokemon.percent = ((this.pokemon.life / this.pokemon.maxLife) * 100)
+        },
+
+        calculaPercentOpo() {
+            this.oponent.percent = ((this.oponent.life / this.oponent.maxLife) * 100)
         },
     }
 }).mount('#app')

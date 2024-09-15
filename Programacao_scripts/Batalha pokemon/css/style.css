@@ -49,7 +49,6 @@ body {
 
 .oponent-life-bar {
     height: 27px;
-    background-color: #44dc75;
     border-radius: 10px;
     border: black solid 2px;
     position: absolute;
@@ -126,7 +125,6 @@ body {
 
 .pokemon-life-bar {
     height: 33px;
-    background-color: #44dc75;
     border-radius: 10px;
     border: black solid 2px;
     width: 99%;
