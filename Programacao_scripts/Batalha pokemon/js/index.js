@@ -81,9 +81,7 @@ createApp({
             },
         }
     },
-    methods: {
-    // Botões de ações --------------------------------------------------------   
-        
+    methods: { 
         // Abre o menu Fight ------------------------------------------------------------------------------
         fight() {
             this.fighting = !this.fighting
@@ -115,7 +113,7 @@ createApp({
             this.pokemon.move = "potion"
         },
 
-        // Botão que avança
+        // Botão que avança e verifica jogo -----------------------------------------------------------------------
         next() {
             if (this.oponent.life === 0) {
                 this.oponent.percent = 0
@@ -129,6 +127,7 @@ createApp({
             }
         },
 
+        // 2º Botão que avança e verifica jogo -----------------------------------------------------------------------
         next2() {
             if (this.pokemon.life === 0) {
                 this.pokemon.percent = 0
@@ -138,10 +137,12 @@ createApp({
             }
         },
 
+        // Botão que recarrega á página ------------------------------------------------------------------------------
         btnRestart() {
             window.location.reload();
         },
 
+        // Mostra a quantidade de PPs na HotBar ------------------------------------------------------------------------
         showPP(name) {
             switch (name) {
                 case 'thunder':
@@ -159,11 +160,12 @@ createApp({
             }
         },
 
+        // Limpa os status da HotBar -----------------------------------------------------------------------------------
         clearDiv() {
             this.moveStats = ""
         },
 
-        // Pokemon Ataques -------------------------------------------------------------
+    // Pokemon Ataques -------------------------------------------------------------
         attack(name) {
             switch (name) {
                 case 'thunder':
@@ -199,7 +201,7 @@ createApp({
             }
         },
 
-        // Oponent ataques --------------------------------------------------------------
+    // Oponent ataques --------------------------------------------------------------
         ia() {
             if (this.oponent.life <= (this.oponent.maxLife * 0.3)) {
                 this.attackRecover()
