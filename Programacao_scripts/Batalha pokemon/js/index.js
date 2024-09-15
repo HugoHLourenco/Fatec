@@ -84,24 +84,28 @@ createApp({
     methods: {
     // Botões de ações --------------------------------------------------------   
         
-        // Abre o menu Fight
+        // Abre o menu Fight ------------------------------------------------------------------------------
         fight() {
             this.fighting = !this.fighting
         },
 
+        // Abre a Bag -----------------------------------------------------------------------------------------
         bag() {
             this.bagStatus = !this.bagStatus
         },
 
+        // Foge da batalha ------------------------------------------------------------------------------------
         run() {
             this.runn = true
             this.battle = 8
         },
 
+        // Abre o menu de Pokemons ------------------------------------------------------------------------------
         showPokemonBar() {
             this.pokemonBar = !this.pokemonBar
         },
 
+        // Método que usa a Potion ------------------------------------------------------------------------------
         usePotion() {
             this.bagStatus = false
             this.potion = false
@@ -111,6 +115,7 @@ createApp({
             this.pokemon.move = "potion"
         },
 
+        // Botão que avança
         next() {
             if (this.oponent.life === 0) {
                 this.oponent.percent = 0
