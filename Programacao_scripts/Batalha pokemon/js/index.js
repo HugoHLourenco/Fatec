@@ -167,6 +167,9 @@ createApp({
 
         // Pokemon Ataques -------------------------------------------------------------
         attack(name) {
+            const som = new Audio(`/MoveSounds/${name}.mp3`)
+            som.play()
+
             switch (name) {
                 case 'thunder':
                     this.moveStats = this.thunder
