@@ -118,7 +118,6 @@ createApp({
         // Botão que avança e verifica jogo -----------------------------------------------------------------------
         next() {
             if (this.oponent.life === 0) {
-                this.oponent.percent = 0
                 this.battle = 6
             } else {
                 this.battle += 1
@@ -132,7 +131,6 @@ createApp({
         // 2º Botão que avança e verifica jogo -----------------------------------------------------------------------
         next2() {
             if (this.pokemon.life === 0) {
-                this.pokemon.percent = 0
                 this.battle = 7
             } else {
                 this.battle = 0
