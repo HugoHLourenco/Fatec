@@ -79,6 +79,42 @@ createApp({
                 modAtk: 1,
                 modDef: 1,
             },
+
+            recover: {
+                name: 'Recover',
+                pp: 10,
+                type: "Normal",
+                db: 0,
+                modAtk: 1,
+                modDef: 1,
+            },
+
+            dragonClaw: {
+                name: 'Dragon Claw',
+                pp: 15,
+                type: "Dragon",
+                db: 110,
+                modAtk: 1,
+                modDef: 1,
+            },
+
+            shadowBall: {
+                name: 'ShadowBall',
+                pp: 15,
+                type: "Ghost",
+                db: 80,
+                modAtk: 1,
+                modDef: 1,
+            },
+
+            calmMind: {
+                name: 'Calm Mind',
+                pp: 20,
+                type: "Psychic",
+                db: 0,
+                modAtk: 1.25,
+                modDef: 1.25,
+            },
         }
     },
     methods: {
@@ -225,6 +261,9 @@ createApp({
         },
 
         attackRecover() {
+            const som = new Audio('/MoveSounds/recover.mp3')
+            som.play()
+
             this.oponent.life += Math.floor(this.oponent.maxLife / 2)
             
             this.battle += 1
@@ -233,6 +272,9 @@ createApp({
         },
 
         attackCalmMind() {
+            const som = new Audio('/MoveSounds/calmMind.mp3')
+            som.play()
+
             this.oponent.attack *= 1.25
             this.oponent.defense *= 1.25
             this.battle += 1
@@ -241,6 +283,9 @@ createApp({
         },
 
         attackShadowBall() {
+            const som = new Audio('/MoveSounds/shadowBall.mp3')
+            som.play()
+
             this.pokemon.life -= Math.floor(((this.oponent.attack / this.pokemon.defense) * 80))
             
             if (this.pokemon.life <= 0) {
@@ -252,6 +297,9 @@ createApp({
         },
 
         attackDragonClaw() {
+            const som = new Audio('/MoveSounds/dragonClaw.mp3')
+            som.play()
+
             this.pokemon.life -= Math.floor(((this.oponent.attack / this.pokemon.defense) * 110))
             
             if (this.pokemon.life <= 0) {
