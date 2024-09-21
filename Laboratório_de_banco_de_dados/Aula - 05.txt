@@ -42,3 +42,12 @@ Query que calcula a média salarial por departamento da tabela {
 	group by dep;
 }
 
+
+
+
+
+CAMPO DA PROVA -------------------------------------------------------------
+select dnr, avg(salario)
+	from funcionario
+	group by dnr;
+

@@ -29,3 +29,15 @@ Contar quantas colunas tem na tabela {
 	select count(*) from columns;
 	SECRETO(select * from columns;)
 }
+
+
+
+delimiter @
+
+create procedure aumenta10()
+begin
+    update funcionario
+    set salario = salario * 1.1;
+end @
+
+delimiter ;
