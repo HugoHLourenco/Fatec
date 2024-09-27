@@ -21,3 +21,22 @@ PASSO 3) {
 	      as resultado
 	     ) as placa;
 }
+
+PASSO 4 {
+	select equipamento_nome, site_nome
+	from equipamento;
+}
+
+PASSO 5 { PRODUTO CARTESIANO:
+	select *
+	from (select slot,
+	CASE WHEN slot = '8' THEN 'CONTROLADORA'
+	WHEN slot in ('9', '10') THEN 'LINK'
+	ELSE 'LINE' END AS slot_tipo
+	from (select @rownum := @rownum + 1 as slot
+	      from (select @rownum:=0 from equipamento limit 10) 
+	      as resultado
+	     ) as placa) as A,
+	(select equipamento_nome, site_nome
+	from equipamento) as B;
+}
