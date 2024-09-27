@@ -1,9 +1,23 @@
 SQL Dinamico
 
-select @rownum:=0
-from equipamento
-limit 10;
+PASSO 1) {
+	select @rownum:=0
+	from equipamento
+	limit 10;
+}
 
-select @rownum := @rownum + 1 as slot
-from (select @rownum:=0 from equipamento limit 10) as resultado;
+PASSO 2) {
+	select @rownum := @rownum + 1 as slot
+	from (select @rownum:=0 from equipamento limit 10) as resultado;
+}
 
+PASSO 3) {
+	select slot,
+	CASE WHEN slot = '8' THEN 'CONTROLADORA'
+	WHEN slot in ('9', '10') THEN 'LINK'
+	ELSE 'LINE' END AS slot_tipo
+	from (select @rownum := @rownum + 1 as slot
+	      from (select @rownum:=0 from equipamento limit 10) 
+	      as resultado
+	     ) as placa;
+}
