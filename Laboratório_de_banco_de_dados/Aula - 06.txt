@@ -40,3 +40,31 @@ PASSO 5 { PRODUTO CARTESIANO:
 	(select equipamento_nome, site_nome
 	from equipamento) as B;
 }
+
+PASSO 6 {
+	insert into placa (site_nome, equipamento_nome, slot, slot_tipo)
+	     		   value ('FRC_CE', 'FRC_CE_OLT_01', 1, 'line');
+	
+	select concat('insert into placa (slot, equipamento_nome, site_nome, slot_tipo)
+		      values(''', 
+		      d.slot, 
+		      ''',''',
+		      d.equipamento_nome,
+		      ''',''',
+		      d.site_nome,
+		      ''',''',
+		      d.slot_tipo,''');')
+	from(select a.slot, b.equipamento_nome, b.site_nome, a.slot_tipo
+	     from (select slot,
+		   CASE WHEN slot = '8' THEN 'CONTROLADORA'
+			WHEN slot in ('9', '10') THEN 'LINK'
+			ELSE 'LINE' END AS slot_tipo
+		   from(select @rownum := @rownum + 1 as slot from ( select @rownum := 0 from equipamento
+			limit 10) as resultado) as placa) as a,
+			(select equipamento_nome, site_nome from equipamento) as b
+			order by b.site_nome, b.equipamento_nome, a.slot) as d;
+		
+	     
+}
+
+
