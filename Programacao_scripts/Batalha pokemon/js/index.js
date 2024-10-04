@@ -158,7 +158,7 @@ createApp({
             this.pokemon.life = 351
             this.pokemon.percent = 99
             this.battle += 1
-            this.pokemon.move = "potion"
+            this.pokemon.move = "Max potion"
             this.buttonSound()
         },
 
