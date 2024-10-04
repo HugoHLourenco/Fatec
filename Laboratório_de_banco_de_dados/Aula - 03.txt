@@ -8,3 +8,37 @@ fazer stored procedure:
 	delimiter;
 
 	call prc_del_data();
+
+
+
+
+
+
+
+	create procedure aumenta()
+	begin
+		update funcionario
+		set salario = salario * 1.1
+	end @
+
+	delimiter;
+
+	call aumenta();
+
+	
+
+	create procedure aumenta()
+	begin
+		update funcionario
+		set salario = salario * 1.1
+	end @
+
+delimiter $$
+
+create procedure aumenta()
+begin
+    update funcionario
+    set salario = salario * 1.1
+end $$
+
+delimiter ;

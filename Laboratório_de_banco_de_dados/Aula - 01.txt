@@ -53,3 +53,69 @@ where modelo = 'ma5800'
 alter table equipamento
 add foreign key(site_nome)
 references site(site_nome);
+
+
+
+
+
+
+COMANDOS DA PROVA ------------------------------------------------------------------------
+create table funcionario(
+pnome varchar(40) not null, 
+minicial varchar(10) not null, 
+unome varchar(40) not null,
+cpf varchar(30) not null,
+datanasc varchar(30) not null,
+endereco varchar(30) not null,
+sexo varchar(30) not null,
+salario varchar(30) not null,
+cpf_supervisor varchar(30) not null,
+dnr varchar(30) not null
+);
+
+
+create table dependente(
+fcpf varchar(40) not null, 
+nome_dependente varchar(10) not null, 
+sexo varchar(40) not null,
+datanasc varchar(30) not null,
+parentesco varchar(30) not null
+);
+
+
+alter table funcionario
+add primary key
+(cpf);
+
+
+alter table dependente
+add primary key
+(nome_dependente);
+
+
+alter table dependente
+add foreign key(fcpf)
+references funcionario(cpf);
+
+
+insert into dependente (
+fcpf, nome_dependente, sexo, datanasc, parentesco)
+values (
+‘12345678966’, ‘elizabeth’, ‘M’, '05-04-1968', 'Filho');
+
+
+
+alter table funcionario
+add column cpf_supervisor
+varchar(30) null;
+
+alter table funcionario
+drop column cpf_supervisor;
+
+update funcionario 
+set cpf_supervisor = null
+where pnome = 'Jorge';
+
+
+
+
