@@ -9,8 +9,7 @@ createApp({
         }
     },
 
-    methods: {
-        
+    methods: {     
         async callAPI(){
             try {
                 const response = await fetch(`https://pokeapi.co/api/v2/pokemon/?offset=${this.nextPage - 1}&limit=${385}`)
