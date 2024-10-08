@@ -34,7 +34,7 @@ createApp({
 
                 console.log(this.pokemons)
 
-
+                this.loading = false
 
             } catch (error) {
                 console.error(error)
@@ -48,7 +48,7 @@ createApp({
                 return {
                     id: data.id,
                     name: data.name,
-                    weight: data.weught,
+                    weight: data.weight,
                     types: data.types,
                     sprites: data.sprites,
                     showDetails: false,
@@ -56,6 +56,16 @@ createApp({
             } catch (e) {
                 console.error(e)
             }
-        }
+        },
+
+        handleScroll() {
+            const bottomOfWindow = document.documentElement.scrollTop + window.innerHeight === document.documentElement.offsetHeight
+            console.log(bottomOfWindow)
+
+            if(bottomOfWindow && !this.loading) {
+                this.loading = true
+                this.callAPI()
+            }
+        },
     }
 }).mount('#app');

@@ -17,13 +17,20 @@
             <ul>
                 <li v-for="pokemon in pokemons" :key="pokemon.id">
                     <div class="pokemon-card">
-                        <p>{{pokemon.name}}</p>
+
+                        <h1>{{pokemon.id}}  {{pokemon.name}}</h1>
                         <img :src="pokemon.sprites.other.showdown.front_default">
-                        
+                        <!-- <p>Types: {{pokemon.types.name}} </p> -->
+                        <h3>Weight: {{pokemon.weight}} Kg</h3>
+                        <br><br><br>
                     </div>
                 </li>
             </ul>
         </div>
+    </div>
+
+    <div class="loading">
+        <h1 v-if="loading">Loading...</h1>
     </div>
 </body>
 </html>
