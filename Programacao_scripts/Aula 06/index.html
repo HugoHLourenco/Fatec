@@ -11,7 +11,18 @@
     <div id="app">
         <button @click="callAPI()">Chamar API</button>
         <div class="search-bar">
-            <input type="text" placeholder="Search Pokémon" >
+            <input type="text" placeholder="Search Pokémon" v-model="search">
+        </div>
+        <div class="pokemon-container">
+            <ul>
+                <li v-for="pokemon in pokemons" :key="pokemon.id">
+                    <div class="pokemon-card">
+                        <p>{{pokemon.name}}</p>
+                        <img :src="pokemon.sprites.other.showdown.front_default">
+                        
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
 </body>

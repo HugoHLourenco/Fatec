@@ -8,11 +8,18 @@ createApp({
             nextPage: 1,
         }
     },
+    created() {
+        this.callAPI()
+        window.addEventListener('scroll', this.handleScroll)
+    },
+    destroyed() {
+        window.removeEventListener('scroll', this.handleScroll)
+    },
 
     methods: {     
         async callAPI(){
             try {
-                const response = await fetch(`https://pokeapi.co/api/v2/pokemon/?offset=${(this.nextPage - 1) * 150}&limit=${151}`)
+                const response = await fetch(`https://pokeapi.co/api/v2/pokemon/?offset=${(this.nextPage - 1) * 151}&limit=${151}`)
                 
                 const data = await response.json()
                 
