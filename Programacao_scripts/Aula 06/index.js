@@ -12,7 +12,7 @@ createApp({
     methods: {     
         async callAPI(){
             try {
-                const response = await fetch(`https://pokeapi.co/api/v2/pokemon/?offset=${this.nextPage - 1}&limit=${385}`)
+                const response = await fetch(`https://pokeapi.co/api/v2/pokemon/?offset=${(this.nextPage - 1) * 150}&limit=${151}`)
                 
                 const data = await response.json()
                 
@@ -21,6 +21,14 @@ createApp({
                 console.log(pokemonDetailsPromisses)
 
                 const pokemonDetails = await Promise.all(pokemonDetailsPromisses)
+
+                this.pokemons = [...this.pokemons, ...pokemonDetails]
+                this.nextPage++
+
+                console.log(this.pokemons)
+
+
+
             } catch (error) {
                 console.error(error)
             }
@@ -30,7 +38,14 @@ createApp({
             try {
                 const response = await fetch(url)
                 const data = await response.json()
-                return {data}
+                return {
+                    id: data.id,
+                    name: data.name,
+                    weight: data.weught,
+                    types: data.types,
+                    sprites: data.sprites,
+                    showDetails: false,
+                }
             } catch (e) {
                 console.error(e)
             }
