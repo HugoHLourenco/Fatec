@@ -20,10 +20,9 @@
 
                         <h1>{{pokemon.id}}  {{pokemon.name}}</h1>
                         <img :src="pokemon.sprites.other.showdown.front_default">
-                        <h3>Type 1: {{pokemon.types[0].type.name}} </h3><h3 v-if="pokemon.types.length > 1">Type 2: {{pokemon.types[1].type.name}} </h3>
+                        <h3 v-if="pokemon.types.length === 1">{{pokemon.types[0].type.name}}</h3><h3 v-else-if="pokemon.types.length > 1">{{pokemon.types[0].type.name }} {{ pokemon.types[1].type.name}} </h3>
                         <h3>Weight: {{pokemon.weight}} Kg</h3>
-                        <br><br><br>
-                        
+                        <br><br><br>                       
                     </div>
                 </li>
             </ul>
