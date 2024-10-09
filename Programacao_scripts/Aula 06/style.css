@@ -4,4 +4,15 @@ body {
 
 .pokemon-card{
     background-color: darkturquoise ;
+    
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.pokemon-container{
+    position: absolute;
+    width: 50%;
+    top: 10%;
+    left: 25%;
 }
