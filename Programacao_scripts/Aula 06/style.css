@@ -8,10 +8,10 @@ body {
 
 .pokemon-card{
     background-color: darkturquoise ;
-    
     display: grid;
     align-items: center;
     justify-content: center;
+    border-radius: 20px;
 }
 
 .pokemon-container{
