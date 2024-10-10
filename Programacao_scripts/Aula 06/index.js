@@ -89,6 +89,8 @@ createApp({
                 fighting: 'fighting',
                 ice: 'ice',
             }
+
+            return classTypeMap[type] || ""
         },
     }
 }).mount('#app');
