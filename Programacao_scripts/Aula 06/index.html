@@ -24,8 +24,7 @@
                         <h3 v-if="pokemon.types.length === 1">{{(pokemon.types[0].type.name).toUpperCase()}}</h3>
                         <h3 v-else-if="pokemon.types.length > 1">{{(pokemon.types[0].type.name).toUpperCase() }}  {{ (pokemon.types[1].type.name).toUpperCase()}} </h3>
                         <h3>Weight: {{(pokemon.weight * 0.45359237).toFixed(0)}} Kg</h3>
-                    </div>
-                    <br><br><br>                       
+                    </div>                     
                 </li>
             </ul>
         </div>
