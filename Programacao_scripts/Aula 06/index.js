@@ -68,29 +68,29 @@ createApp({
             }
         },
 
-        getTypeCase() {
+        getTypeClass(type) {
             const classTypeMap = {
                 fire: 'fire',
                 grass: 'grass',
                 water: 'water',
-                ground: 'ground',
-                eletric: 'eletric',
-                steel: 'stell',
                 bug: 'bug',
-                flying: 'flying',
-                rock: 'rock',
-                psychic: 'psychic',
-                dark: 'dark',
-                ghost: 'ghost',
-                fairy: 'fairy',
                 normal: 'normal',
                 poison: 'poison',
-                dragon: 'dragon',
+                electric: 'electric',
+                ground: 'ground',
+                ghost: 'ghost',
                 fighting: 'fighting',
+                psychic: 'psychic',
+                rock: 'rock',
                 ice: 'ice',
+                steel: 'steel',
+                dark: 'dark',
+                flying: 'flying',
+                fairy: 'fairy',
+                dragon: 'dragon',
             }
 
-            return classTypeMap[type] || ""
-        },
+            return classTypeMap[type] || '';
+        }
     }
 }).mount('#app');

@@ -15,7 +15,7 @@
         </div>
         <div class="pokemon-container">
             <ul>
-                <li v-for="pokemon in pokemons" :key="pokemon.id">
+                <li v-for="pokemon in pokemons" :key="pokemon.id" :class="getTypeClass(pokemon.types[0].type.name)">
                     <div class="pokemon-card">
                         <h1>{{pokemon.id}} - {{(pokemon.name).toUpperCase()}}</h1>
                         <div class="pokemon-img">
