@@ -1,6 +1,6 @@
 body {
-    font-family: 'Oxanium', cursive;
-    
+    font-family: "Comic Sans MS", cursive;
+    background-color: #f5f5f5;
     margin: 0;
 }
 
@@ -10,14 +10,13 @@ ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-  
 }
 
 li{
     margin: 10px;
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.925);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.829);
     transition: background-color 0.3s ease;
     cursor: pointer;
 }
@@ -26,7 +25,11 @@ li{
     text-align: center;
 }
 
-.fire { background-color: #ffa20d}
+.pokemon-img {
+   
+}
+
+.fire { background-color: #c27e10}
 .grass { background-color: #4CAF50 }
 .dragon { background-color: #3263cc}
 .ice { background-color: #42bed3 }
