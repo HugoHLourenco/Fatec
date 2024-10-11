@@ -1,0 +1,16 @@
+Criar uma procedure para atribuir o SQl dinamico {
+	create procedure prc_carga_placa()
+	begin
+		declare
+
+		declare cursor select
+
+		open cursor
+
+		read loop
+		
+			insert
+
+		end loop
+	end;
+}
