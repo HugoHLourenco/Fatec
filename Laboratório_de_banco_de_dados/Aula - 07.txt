@@ -1,4 +1,4 @@
-Criar uma procedure para atribuir o SQl dinamico {
+Criar uma procedure para atribuir o SQL dinamico {
 	create procedure prc_carga_placa()
 	begin
 		declare
@@ -14,3 +14,9 @@ Criar uma procedure para atribuir o SQl dinamico {
 		end loop
 	end;
 }
+
+
+select pnome, unome, salario
+from
+(select * from funcionario
+where dnr = 5) as qualquercoisa;
