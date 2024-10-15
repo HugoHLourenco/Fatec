@@ -6,7 +6,6 @@ createApp({
             loading: true,
             searchText: '',
             nextPage: 1,
-            
         }
     },
     created() {
