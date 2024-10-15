@@ -89,7 +89,6 @@ createApp({
                 fairy: 'fairy',
                 dragon: 'dragon',
             }
-
             return classTypeMap[type] || '';
         }
     }
