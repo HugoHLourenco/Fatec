@@ -1,10 +1,10 @@
 <script setup>
-
 import HelloWorld from "./components/HelloWorld.vue";
 import Mensagem from "./components/Mensagem.vue";
 import Soma from "./components/Soma.vue";
 import Subtracao from "./components/Subtracao.vue";
 import Multiplicacao from "./components/Multiplicacao.vue";
+import Divisao from "./components/Divisao.vue";
 </script>
 
 <template>
@@ -22,6 +22,8 @@ import Multiplicacao from "./components/Multiplicacao.vue";
   <subtracao n2="100" n1="20"></subtracao>
   <multiplicacao n2="3" n1="4"></multiplicacao>
   <multiplicacao n2="20" n1="38"></multiplicacao>
+  <divisao n2="9" n1="3"></divisao>
+  <divisao n2="3" n1="9"></divisao>
 </template>
 
 <style scoped>
