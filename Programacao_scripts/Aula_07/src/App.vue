@@ -2,6 +2,7 @@
 
 import HelloWorld from "./components/HelloWorld.vue";
 import Mensagem from "./components/Mensagem.vue";
+import Soma from "./components/Soma.vue";
 </script>
 
 <template>
@@ -13,6 +14,8 @@ import Mensagem from "./components/Mensagem.vue";
   <HelloWorld></HelloWorld>
   <p class="verde">Test</p>
   <Mensagem msg="Prospere"></Mensagem>
+  <Soma n2="10" n1="1"></Soma>
+  <Soma n2="20" n1="5"></Soma>
 </template>
 
 <style scoped>
