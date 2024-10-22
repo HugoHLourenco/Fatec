@@ -18,6 +18,7 @@ import Subtracao from "./components/Subtracao.vue";
   <Soma n2="10" n1="1"></Soma>
   <Soma n2="20" n1="5"></Soma>
   <Subtracao n2="20" n1="5"></Subtracao>
+  <subtracao n2="100" n1="20"></subtracao>
 </template>
 
 <style scoped>
