@@ -3,12 +3,12 @@ defineProps(
     {
       n1:{
         type: Number,
-        default: "Mandao n1",
+        default: "Manda o n1",
         required: true
       },
       n2: {
         type: Number,
-        default: "Mandao n2",
+        default: "Manda o n2",
         required: true
       }
     }
@@ -16,11 +16,11 @@ defineProps(
 </script>
 
 <template>
-  <p>{{ Number(n2) }} - {{ Number(n1) }} = {{ Number(n2) - Number(n1) }}</p>
+  <p>{{ n1 }} X {{ n2 }} = {{ n1 * n2 }}</p>
 </template>
 
 <style scoped>
-p{
-  color: #00BFFF;
-}
+  p{
+    color: #5a29e2;
+  }
 </style>

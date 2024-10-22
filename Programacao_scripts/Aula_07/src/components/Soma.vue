@@ -21,6 +21,6 @@
 
 <style scoped>
   p{
-    color: yellowgreen;
+    color: crimson;
   }
 </style>

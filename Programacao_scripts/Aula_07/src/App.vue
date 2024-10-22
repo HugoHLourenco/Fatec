@@ -4,6 +4,7 @@ import HelloWorld from "./components/HelloWorld.vue";
 import Mensagem from "./components/Mensagem.vue";
 import Soma from "./components/Soma.vue";
 import Subtracao from "./components/Subtracao.vue";
+import Multiplicacao from "./components/Multiplicacao.vue";
 </script>
 
 <template>
@@ -19,6 +20,8 @@ import Subtracao from "./components/Subtracao.vue";
   <Soma n2="20" n1="5"></Soma>
   <Subtracao n2="20" n1="5"></Subtracao>
   <subtracao n2="100" n1="20"></subtracao>
+  <multiplicacao n2="3" n1="4"></multiplicacao>
+  <multiplicacao n2="20" n1="38"></multiplicacao>
 </template>
 
 <style scoped>
