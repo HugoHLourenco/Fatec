@@ -90,6 +90,7 @@ createApp({
                 dragon: 'dragon',
             }
             return classTypeMap[type] || '';
+            
         }
     }
 }).mount('#app');
