@@ -9,3 +9,10 @@ Fazendo intersecção em algebra relacional (Pega os iguais e descarta o resto){
 	FROM dependente
 	INNER JOIN funcionario on fcpf = cpf;
 }
+
+Fazendo diferença em algebra relacional (O que tem, que o outro não tem){
+	SELECT cpf
+	FROM funcionario
+	INNER JOIN dependente on cpf = Fcpf 
+	WHERE Fcpf is null;
+}
