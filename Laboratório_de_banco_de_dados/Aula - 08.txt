@@ -1,0 +1,11 @@
+Fazendo união em algebra relacional {
+	select f_cpf from dependente
+	union all
+	select Pnome from funcionario;
+}
+
+Fazendo intersecção em algebra relacional {
+	select f_cpf from dependente
+	intersect
+	select Pnome from funcionario;
+}
