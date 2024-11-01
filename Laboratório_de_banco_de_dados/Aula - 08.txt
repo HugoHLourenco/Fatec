@@ -24,7 +24,7 @@ Fazendo diferença em algebra relacional (O que tem, que o outro não tem){
 }
 
 Fazendo Produto cartesiano em algebra relacional (){
-	SELECT * from funcionario, dependente;	
+	SELECT * from funcionario, dependente	
 }
 
 
