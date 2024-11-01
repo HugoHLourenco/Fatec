@@ -15,4 +15,17 @@ Fazendo diferença em algebra relacional (O que tem, que o outro não tem){
 	FROM funcionario
 	INNER JOIN dependente on cpf = Fcpf 
 	WHERE Fcpf is null;
+
+	ou
+
+	Select cpf from funcionario
+	except
+	Select Fcpf from dependente;
 }
+
+Fazendo Produto cartesiano em algebra relacional (){
+	SELECT * from funcionario, dependente;	
+}
+
+
+
