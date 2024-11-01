@@ -1,11 +1,11 @@
-Fazendo união em algebra relacional {
+Fazendo união em algebra relacional (soma tudo){
 	select f_cpf from dependente
 	union all
 	select Pnome from funcionario;
 }
 
-Fazendo intersecção em algebra relacional {
-	select f_cpf from dependente
-	intersect
-	select Pnome from funcionario;
+Fazendo intersecção em algebra relacional (Pega os iguais e descarta o resto){
+	SELECT fcpf
+	FROM dependente
+	INNER JOIN funcionario on fcpf = cpf;
 }
