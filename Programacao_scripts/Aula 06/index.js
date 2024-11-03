@@ -91,7 +91,6 @@ createApp({
             }
             return classTypeMap[type] || '';
             
-            
         }
     }
 }).mount('#app');
