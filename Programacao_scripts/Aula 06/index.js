@@ -68,6 +68,7 @@ createApp({
             }
         },
 
+        
         getTypeClass(type) {
             const classTypeMap = {
                 fire: 'fire',
