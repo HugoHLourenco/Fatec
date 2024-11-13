@@ -355,4 +355,5 @@ createApp({
             this.oponent.percent = ((this.oponent.life / this.oponent.maxLife) * 100)
         },
     }
+    
 }).mount('#app')
