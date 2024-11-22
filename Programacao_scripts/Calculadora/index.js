@@ -40,6 +40,7 @@ createApp({
                     break
                 default:
                     this.lidarNumero(bt)
+                    
             }
         },
 
