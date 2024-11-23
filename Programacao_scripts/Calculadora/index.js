@@ -76,6 +76,7 @@ createApp({
                 this.display = this.numeroAnterior - this.numeroAtual
                 this.numeroAtual = ""
                 this.numeroAnterior = ""
+                
             }
         },
 
