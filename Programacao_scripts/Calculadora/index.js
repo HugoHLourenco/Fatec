@@ -1,4 +1,4 @@
-const {createApp} = Vue
+const { createApp } = Vue
 createApp({
     data() {
         return {
@@ -40,7 +40,7 @@ createApp({
                     break
                 default:
                     this.lidarNumero(bt)
-                    
+
             }
         },
 
@@ -70,14 +70,13 @@ createApp({
                 this.display = +this.numeroAtual + +this.numeroAnterior
                 this.numeroAtual = ""
                 this.numeroAnterior = ""
-                
             } else if (this.operador === "-") {
                 this.numeroAtual = this.display
                 Number(this.numeroAtual)
                 this.display = this.numeroAnterior - this.numeroAtual
                 this.numeroAtual = ""
                 this.numeroAnterior = ""
-                
+
             }
         },
 
@@ -147,7 +146,7 @@ createApp({
         },
 
         vorta() {
-            
+
         }
     }
 }).mount("#app")
