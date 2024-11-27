@@ -70,6 +70,7 @@ createApp({
                 this.display = +this.numeroAtual + +this.numeroAnterior
                 this.numeroAtual = ""
                 this.numeroAnterior = ""
+                
             } else if (this.operador === "-") {
                 this.numeroAtual = this.display
                 Number(this.numeroAtual)
