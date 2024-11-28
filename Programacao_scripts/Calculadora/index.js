@@ -81,6 +81,7 @@ createApp({
             }
         },
 
+        
         lidarNumero(bt) {
             if (this.display === "0" || this.display === 'Erro') {
                 this.display = bt
