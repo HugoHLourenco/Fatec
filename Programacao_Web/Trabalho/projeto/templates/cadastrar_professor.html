@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar Professor</title>
+    <link rel="stylesheet" href="../static/bootstrap.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de Professor</h1>
+        <form action="{{ url_for('cadastrar_professor') }}" method="post">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" class="form-control" id="nome" name="nome">
+            </div>
+            <div class="form-group">
+                <label for="telefone">Telefone:</label>
+                <input type="text" class="form-control" id="telefone" name="telefone">
+            </div>
+            <div class="form-group">
+                <label for="usuario">Usuário:</label>
+                <input type="text" class="form-control" id="usuario" name="usuario">
+            </div>
+            <div class="form-group">
+                <label for="senha">Senha:</label>
+                <input type="password" class="form-control" id="senha" name="senha">
+            </div>
+            <div class="form-group">
+                <label for="disciplinas">Disciplinas:</label>
+                <select multiple class="form-control" id="disciplinas" name="disciplinas">
+                    {% for disciplina in disciplinas %}
+                        <option value="{{ disciplina[0] }}">{{ disciplina[1] }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Salvar</button>
+        </form>
+    </div>
+    <br>
+    <div>
+        <a href="/professores" class="btn btn-success">Voltar</a>
+    </div>
+</body>
+</html>

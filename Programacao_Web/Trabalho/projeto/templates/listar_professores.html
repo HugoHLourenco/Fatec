@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Listar Professores</title>
+    <link rel="stylesheet" href="../static/bootstrap.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Listar Professores</h1>
+        <div>
+            <a href="{{ url_for('cadastrar_professor') }}" class="btn btn-primary">Cadastro de Professor</a>
+        </div>
+        <br>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Disciplinas</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for professor in professores %}
+                <tr>
+                    <td>{{ professor[0] }}</td>
+                    <td>{{ professor[1] }}</td>
+                    <td>{{ professor[5] }}</td>
+                    <td>
+                        <a href="{{ url_for('editar_professor', id=professor[0]) }}" class="btn btn-warning">Editar</a>
+                        <form action="{{ url_for('excluir_professor', id=professor[0]) }}" method="post" style="display:inline;">
+                            <button type="submit" class="btn btn-danger">Excluir</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <a href="/" class="btn btn-success">Voltar</a>
+</body>
+</html>

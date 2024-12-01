@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Listar Alunos</title>
+    <link rel="stylesheet" href="../static/bootstrap.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Listar Alunos</h1>
+        <div>
+            <a href="{{ url_for('cadastrar_aluno') }}" class="btn btn-primary">Cadastro de Aluno</a>
+        </div>
+        <br>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Curso</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for aluno in alunos %}
+                <tr>
+                    <td>{{ aluno[0] }}</td>
+                    <td>{{ aluno[1] }}</td>
+                    <td>{{ aluno[5] }}</td>
+                    <td>
+                        <a href="{{ url_for('editar_aluno', id=aluno[0]) }}" class="btn btn-warning">Editar</a>
+                        
+                        <form action="{{ url_for('excluir_aluno', id=aluno[0]) }}" method="post" style="display:inline;">
+                            <button type="submit" class="btn btn-danger">Excluir</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <a href="/" class="btn btn-success">Voltar</a>
+</body>
+</html>
