@@ -117,6 +117,7 @@ createApp({
                     this.display = "0"
                     break
             }
+            
         },
 
         lidarClear() {
